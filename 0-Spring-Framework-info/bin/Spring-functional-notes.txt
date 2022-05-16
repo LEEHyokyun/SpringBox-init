@@ -1,0 +1,50 @@
+***Spring***
+
+- Spring IOC / DI
+- AOP
+- MyBatis Framework
+- SpringMVC
+- jUnit Framework
+- jQuery / Ajax / JSON / REST
+- SpringBoot
+- Thymeleaf
+- JPA
+- Spring Security
+- Spring Cloud, MSA
+
+ㅁ 개념
+	ㅁ library : 라이브러리, 재사용 가능한 프로그램의 모음
+		ㄴ java 프로그램 압축 확장자
+	ㅁ component : 프로그램 실행시 하나의 독립적 기능단위를 이루어 부품화하는 것
+		ㄴ bean : 자바 컴포넌트
+	ㅁ API : Application Programming Interface, 	응용프로그램을 개발하기 위해 제공하는 인터페이스
+	ㅁ FrameWork : 뼈대, 틀, 응용 프로그램의 기반
+		ㄴ 반완전한 어플리케이션, 제공 가능한 것을 최대한 지원
+	ㅁ Spring Framework : Java 어플리케이션의 설계/구현/테스트/운영에 대한 다양한 컴포넌트와 디자인 패턴을 제공
+		ㄴ 개발자가 비즈니스 로직에 집중할 수 있도록 하기 위한 것이 목적
+		ㄴ IOC/DI, AOP, MVC, Springboot 등을 지원, MyBatis, JPA, Junit과 같은 기술 지원
+		
+ㅁ IOC/DI
+	ㅁ IOC, Inversion of Control 
+		- 제어의 반전, 역제어
+		- IOC는 소프트웨어 디자인 패턴, 인스턴스를 제어하는 주도권이 역전
+		- 컴포넌트를 구성하는 인스턴스 생성과 의존관계 연결처리를 IOC 컨테이너에 위임
+	ㅁ DI, Dependency Injection
+		- IOC 실현기법 중 하나, 의존성 주입
+		- 필요로 하는 의존대상(컴포넌트, bean, 인스턴스 등)을 주입(injection)을 통해 확보
+	ㅁ DL, Dependency Loopkup
+		- IOC 실현기법 중 하나, 의존성 검색
+		- 필요로 하는 의존대상을 검색을 통해 확보
+
+	ㅁ IOC, DI, DL 또는 IOC(DI) Container의 목적
+		- 각 컴포넌트, 인스턴스의 생성 및 통합 관리의 목적은 Loose Coupling
+		- 즉 느슨한 결합도를 통한 컴포넌트 간 의존성 최소화
+		- 인스턴스 scope 관리 -> Singleton이 기본적용
+		- AOP Proxy 기능 지원(*디자인 패턴의 일종)
+	
+ㅁ IOC 적용
+	1) 일단은 라이브러리를 붙여넣고 build to path하여 적용
+		ㄴ 그 후 src>.....기존 하듯이
+		ㄴ  IOC 적용시, 필요시 직접 생성하는 기존 제어방식과 달리 컴포넌트 변경시 DL(혹은 DI)을 통해 관련 객체를 직접 생성하지 않고도
+		 	Spring IOC Container로부터 필요로 하는 컴포넌트를 확보할 수 있다.
+		
