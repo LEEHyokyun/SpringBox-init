@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<title>jquery css selector</title>
+</head>
+<body>
+<a href="http://daum.net" class="ct">다음넷으로</a>
+<br>
+<a href="http://naver.com">네이버넷으로</a>
+<br>
+<a href="http://google.com" class="ct">네이버넷으로</a>
+<br>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//after DOM loaded, 현 페이지에 대한 이벤트 등록
+		$("a").click(function(){
+			alert("Hello");
+		}); //tag
+		$(".ct").click(function(){
+			return confirm($(this).text()+"페이지로 이동하시겠습니까?");
+		});
+	});
+</script>
+</body>
+</html>

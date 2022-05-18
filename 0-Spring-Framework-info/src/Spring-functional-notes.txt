@@ -35,16 +35,179 @@
 	ㅁ DL, Dependency Loopkup
 		- IOC 실현기법 중 하나, 의존성 검색
 		- 필요로 하는 의존대상을 검색을 통해 확보
-
+		- JNDI, DBCP 등 다양한 곳에 활용
 	ㅁ IOC, DI, DL 또는 IOC(DI) Container의 목적
 		- 각 컴포넌트, 인스턴스의 생성 및 통합 관리의 목적은 Loose Coupling
 		- 즉 느슨한 결합도를 통한 컴포넌트 간 의존성 최소화
 		- 인스턴스 scope 관리 -> Singleton이 기본적용
 		- AOP Proxy 기능 지원(*디자인 패턴의 일종)
-	
-ㅁ IOC 적용
+
+ㅁ Spring 설정방식에는 3가지가 존재한다.
+	* xml
+	* java
+	* Annotation
+	* xml + Annotation / java + Annotation 조합으로 설정하는 방식도 존재
+		ㄴ legacy           ㄴ boot
+	* @Configuration, spring 설정 클래스임을 IOC Container에게 명시해준다.
+		ㄴ Annotation, 의미있는 주석으로 컴파일/런타임 간 영향을 주는 주석
+		ㄴ 소스코드 상 해당 설정이 기술됨
+	* xml : 소스코드와 설정이 분리
+
+ㅁDI를 통한 IOC에서 사용하는 어노테이션 타입 정의
+	*Component 계열 어노테이션 -> 컴포넌트 계열의 상위 타입, 일반 컴포넌트 클래스에 명시
+		ㄴ @Component - 컴포넌트 계열의 상위 타입(일반 컴포넌트 클래스에 명기)
+		ㄴ @Repository - 영속성 계층(persistence layer, Data Access Layer, DAO)
+		ㄴ @Service - 비즈니스 계층(service, business layer)
+			ㄴ DI계열 어노테이션 : @AutoWired, @Qualified(다수의 구현체)
+				ㄴ @Autowired //DI 어노테이션..스프링 컨테이너가 매개변수의 데이터 타입에 일치하는 type의 bean을 주입한다.
+				//setProducTDAO의 매개변수 데이터 타입인 ProductDAO, 즉 인터페이스 데이터 타입이 주입된다(to bean).
+	@Qualifier("productDAOImplVer2")
+		ㄴ @Controller - 컨트롤러(presentation layer), MVC에서 Controller logic 클래스에서 사용
+			ㄴ DI계열 어노테이션 : @Resources
+		ㄴ @RestController - REST API COntroller에서 사용(@Controller + @ResponseBody)
+	※ 의미 부여를 통한 구체적인 컨트롤을 구현!
+	※ IoC Container 측에서는 주입된 다양한 타입의 bean들을 살펴보고, 사용자측에서 사용할 객체에 따라 선별적으로 확보
+		ㄴ Container에는, 즉 data type 및 bean은 인터페이스가 아닌 구현체가 담겨진다.
+		
+ㅁ DL을 통한 IOC적용
 	1) 일단은 라이브러리를 붙여넣고 build to path하여 적용
 		ㄴ 그 후 src>.....기존 하듯이
 		ㄴ  IOC 적용시, 필요시 직접 생성하는 기존 제어방식과 달리 컴포넌트 변경시 DL(혹은 DI)을 통해 관련 객체를 직접 생성하지 않고도
 		 	Spring IOC Container로부터 필요로 하는 컴포넌트를 확보할 수 있다.
+				ㄴ Spring IOC Container는 기본적으로 Singleton pattern임
+				
+	2) maven 라이브러리를 xml 설정에 기술하여 tool bean 사용
+		ㄴ //IOC Container 생성, spring 설정 xml을 로딩하여 tool bean생성
+			//IOC Container는 singleton이다.
+			ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+			Tool tool = (Tool) ctx.getBean("tool");
+			tool.work();
+			ctx.close();
 		
+		※ maven : 프로젝트 관리도구이자 빌드툴(compile, package, deploy)
+			ㄴ 의존 라이브러리를 일괄적으로 관리
+			ㄴ 원격 저장소에 있는 라이브러리들을 한번 로컬 저장소에 저장, 사용
+			ㄴ 설정 파일은 pom.xml(project object model, pom), 이 설정을 프로젝트시 팀원들과 공유한다.
+	
+	3) java spring IOC Container에 명기할 특정 클래스 설정
+		@Configuration 
+		//spring 설정 클래스임을 명기(to Spring IoC Container)
+		public class AppConfig {
+			@Bean  //tool 메서드명이 bean id가 되어 IOC Container에 bean으로 등록
+			Tool tool() {
+				return new Hammer();
+			}
+	
+			@Bean
+			Tool tool2() {
+				return new Spade();
+			}
+		}
+		
+	4) java spring IOC Container에 component를 명시하고, 이에 대한 bean id 설정
+		//xml 처리	
+			<!-- 
+			Spring Container에서 base package 하위의 클래스들을 스캔,
+			컴포넌트 계열 어노테이션이 명시된 클래스를 객체 생성하여 bean으로 등록
+			또한 DI 계열 어노테이션을 확인해 처리한다.
+ 			-->
+ 			<context:component-scan base-package="org.kosta.myproject">
+ 			
+		//IOC Container에 해당 클래스가 컴포넌트임을 알리는 어노테이션
+		//해당 클래스를 bean으로 컨테이너에 등록된다
+		@Component("tool")
+		public class Hammer implements Tool{
+			@Override
+			public void work() {
+				System.out.println("망치를 사용하여 일을 하였습니다.");
+			}
+		}
+		
+		public static void main(String[] args) {
+		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+		Tool tool = (Tool) ctx.getBean("tool");
+		tool.work();
+		ctx.close();
+		}
+	
+	5) java spring IOC Container에 component 명기 및 component-scan(base package) 설정하되, 설정 클래스 파일에 일괄 등록
+	※ xml을 통한 설정이 아닌, java 기반을 통하여 base package 등을 등록
+	@Configuration //Spring 설정 class임을 IOC Container에 명기
+	@ComponentScan("org.kosta.myproject") //지정 패키지의 하위 클래스들을 스캔, 컴포넌트 계열 클래스들을 bean 등록
+	public class AppConfig {
+
+	}
+		
+	public static void main(String[] args) {
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
+		ctx.close();
+	}
+
+ㅁ DI를 통한 IOC적용
+	※ IOC에 객체를 주입하고 사용한다.
+	※ xml 기반 설정도 있으나, 대부분은 어노테이션 방식으로 사용한다.
+	※ @AutoWired, @Resource 중 Spring ver5 이상에서는 @autoWired 어노테이션을 권장한다.
+	1) @AutoWired, 의존 대상 bean을 타입으로 검색하여 주입(생성자, 필드, setter 모두 가능)
+		* 만약 동일 인터페이스 타입에 다수 구현체가 존재할 경우, @Qualified로 분류
+	
+	2) @Resources, 마찬가지로 의존 대상 bean을 타입으로 검색하여 주입(생성자, 필드, setter 모두 가능)
+		* 만약 다수 구현체 존재시 @Resources(name="bean name")으로 속성을 추가적으로 명시
+	
+	※ 의존성 주입, DI는 field(변수/상수), constructor, setter로 가능하다.
+		* Spring 4.3 버전 이상부터는 Constructor(생성자)를 통한 DI를 권장한다(UnitTest의 용이성 등).
+		* Resource annotation의 경우, field와 setter에 적용된다.
+		
+	※ 생성자를 통한 DI권장
+		* field(constant, variable) 주입, setter(수정자) 주입은 의존성 객체가 주입되지 않아도, 
+		이를 의존하는 객체가 생성될 수 있다(=신용정보없이 카드 생성).
+			ㄴ 런타임시 오류 발생 가능성
+		* 생성자 주입은(Constructor Injection) 해당 객체가 생성되는 시점에 반드시 의존성 객체가
+		주입되어야 하므로, 런타임시 오류 발생 가능성이 없다.
+		* 단위 테스트에 용이
+			ㄴ 의존관계를 가지는 다양한 객체를 생성하여 생성자에 주입, 테스트 가능
+	
+ㅁ AOP
+	* Aspect Oriented Programming, 관점 지향 프로그래밍
+	* OOP를 더욱 OOP답게
+	* Core Concern, 핵심관심사 + Cross Cutting Concern(Common Concern), 횡단(공통)관심사로 분류
+	ㅁ AOP의 key point는 관심사의 분류 - "로깅:이력관리", "보안:인증,인가", "트랜잭션 처리", "시스템 성능, 응답 등 체크" 이다.
+		ㄴ 영역, 범위가 제한된 기능 - Core
+		ㄴ 말 그대로 영역, 범위가 제한되지 않고 공통적으로 사용하는 기능 - Cross, Common
+	ㅁ point, 관심사를 일단 분류한 후 AOP module을 생성하여 적용대상 및 시점(필요)에 따라 각 서비스에 주입한다(공통기능적용)
+		ㄴ 공통 관심사를 AOP module로 생성하고, 이를 필요한 대상에 적용(※위빙)
+		ㄴ 유지보수 용이
+		
+	ㅁ  각 서비스의 find 계열 메소드에 대해 별도 작업이 필요할 경우
+		 *  ㄴ 검색어에 대한 기록, 로깅, 이력관리 등
+		 *  ㄴ 1) 전체 서비스에서 find 계열 메소드에 직접 코드를 삽입한다(비효율적인 방식)
+		 *  	ㄴ 반복작업이 증가, 생산성 감소, common 로직 변경시 일괄변경필요(유지보수성 감소)
+		 *  ㄴ 2) AOP 적용을 통한 유지보수성 향상
+		 		각 서비스의 find 계열 메소드에 대해 별도 작업이 필요할 경우
+		 *  	검색어에 대한 기록, 로깅, 이력관리 등
+		 *  	 AOP를 통해 생산성 및 유지보수성을 높인 로직으로 구성
+		 *  	* maven을 통해 AOP 라이브러리 추가
+		 *  	* 별도 모듈에서 공통로직을 정의
+		 *  		ㄴ org.kosta.myproject.aop.LoggingAspect
+		 *		* AOP설정 - AppConfig에 추가
+		 			ㄴ @Aspect	
+						@Component
+						public class CommonAspect {
+						@Before("execution(public * org.kosta.myproject.model.*Service.find*(..))") 
+						//대상이 실행되기 전에 공통기능을 정의 //execute, 접근제어자 - return type,적용대상 패키지 및 메소드계열,매개변수
+						public void beforeExecute() {
+							System.out.println("**AOP 검색계열 공통 기능**");
+						}
+		 ※ weaver, 공통 관심사를 "짠다" "구성한다"
+	ㅁ AOP 관련 용어들
+		* Advice, 특정 시점에 적용되는 횡단 관심사 기능(before, after, after-returning, after-throwing, around)
+		* Weaving, Core에 Advice를 적용하여 관심사를 직조, 짜는, 구성하는 작업
+		* pointcut, 접근제어자/return type 등 적용대상을 지정하는 작업
+			ㄴ AspectJ 기술을 이용..execution/within/bean 등
+		* proxy design pattern, AOP 동작원리
+		* Logging(Log4j, Logback, Slf4j) - 검색어 기록
+
+ㅁ jQuery, Ajax
+	ㅁ 참고사항
+	* window load(javascript), jquery ready의 차이?
+			- window load는 이미지, 동영상 등 모든 자원이 적재된 후 실행
+			- jquery는 DOM이 load되는 시점에서 실행 

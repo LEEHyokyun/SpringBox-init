@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<title>jquery, ajax</title>
+</head>
+<body>
+<script type="text/javascript">
+	/* jQuery(document).ready(function(){
+		alert("hello jQuery!");	
+	}); */
+	/*
+		window load(javascript), jquery ready의 차이?
+			- window load는 이미지, 동영상 등 모든 자원이 적재된 후 실행
+			- jquery는 DOM이 load되는 시점에서 실행
+	*/
+	/* window.onload=function(){
+		alert("window onload");
+	} */
+	$(document).ready(function() {
+		//반드시 ready 내부에 로직을 구성해야 한다.
+		$("a").click(function() {
+			//a tag 요소 클릭시 함수 동작
+			alert("clicked!");
+		});
+		
+		$("span").click(function(){
+			alert("span clicked!");
+		})
+		$("button").click(function(){
+			alert("button clicked!");
+		})
+	});
+</script>
+jquery 기본
+<br><br>
+<ul>
+	<li><a href="#">test1</a></li>
+	<li><a href="#">test2</a></li>
+	<li><a href="#">test3</a></li>
+	<li><a href="#">test4</a></li>
+</ul>
+<span>클릭!</span>
+<span>클릭!</span>
+<br>
+<button type="button">버튼1</button>
+<button type="button">버튼2</button>
+<button type="button">버튼3</button>
+</body>
+</html>
