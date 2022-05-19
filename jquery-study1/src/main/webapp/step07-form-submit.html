@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>jquery form submit</title>
+</head>
+<body>
+<input type="text" id="nickName"><button type="button" id="testBtn">nickName 버튼</button>
+<br>
+<form action="test.jsp" id="regForm">
+	등록정보 <input type="text" name="info">
+	<button type="submit">등록하기</button>
+</form>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//nickName 항목에 입력된 value 확보하기
+		$("#testBtn").click(function(){
+			if($("#nickName").val()!=""){
+				alert($("#nickName").val());
+				$("#nickName").val("");
+				//method chaining $("#nickName").val("").focus()
+			}else{
+				alert("닉네임을 입력하시오.");
+			}
+		});
+		
+		$("#regForm").submit(function(){
+			return confirm("등록하시겠습니까?");
+		});
+	});
+</script>
+</body>
+</html>

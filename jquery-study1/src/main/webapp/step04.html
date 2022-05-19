@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<title>jsp selector</title>
+</head>
+<body>
+<button type="button">버튼1</button>
+<button type="submit">버튼2</button>
+<button type="button" class="test">버튼3</button>
+<hr>
+<span id="result"></span>
+<script type="text/javascript">
+	//이벤트 중복 바인딩 가능!
+	$(document).ready(function(){
+		$("button[type=button]").click(function(){
+			alert("clicked!" + $(this).text());
+		});
+		//class selector!
+		$(".test").click(function(){
+			//id selector!
+			//$("#result").text($(this).text()); //value 할당, text()! -> 말 그대로 text 요소만 삽입
+			$("#result").html("<font color=pink>"+$(this).text()+"</font>"); //value 할당, text()!  -> html 요소 모두 삽입
+		});
+		
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<title>css selector</title>
+<style type="text/css">
+	.a{
+		background-color: yellow;
+	}
+	.b{
+		background-color: lime;
+	}
+	#result{
+		background-color: orange;
+	}
+</style>
+</head>
+<body>
+<ol class ="a food">
+	<li>치킨</li>
+	<li>피자</li>
+	<li>콜라</li>
+</ol>
+<ul class="b drink">
+	<li>소주</li>
+	<li>맥주</li>
+	<li>와인</li>
+</ul>
+<ol>
+	<li>하와이</li>
+	<li>사이판</li>
+	<li>제주도</li>
+</ol>
+<br><br>
+<span id="result"></span>
+<br><br>
+<div class="student">아이유</div>
+<div class="teacher">강하늘</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//food 요소의 li 클릭시, 자신의 텍스트를 span id(result)에 출력
+		$(".food li").click(function(){
+			$("#result").text($(this).text());
+		});
+		//여러 셀렉터 설정시 -> 셀렉터, 셀렉터 
+		$(".student, .teacher").click(function(){
+			alert("hello!");
+		});
+	});
+</script>
+</body>
+</html>

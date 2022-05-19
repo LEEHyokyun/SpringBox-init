@@ -2,6 +2,7 @@ package test;
 
 import org.kosta.myproject.config.AppConfig;
 import org.kosta.myproject.model.MemberService;
+import org.kosta.myproject.model.MemberServiceImpl;
 import org.kosta.myproject.model.ProductService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -11,8 +12,6 @@ public class TestAOP {
 		MemberService ms = (MemberService) ctx.getBean("memberServiceImpl"); //DL, look up방식
 		ProductService ps = (ProductService) ctx.getBean("productServiceImpl"); //DL, loop up방식
 		
-		ms.findMemberByAddress();
-		ps.findProductById();
 		/*
 		 * 각 서비스의 find 계열 메소드에 대해 별도 작업이 필요할 경우
 		 *  ㄴ 검색어에 대한 기록, 로깅, 이력관리 등
@@ -23,6 +22,15 @@ public class TestAOP {
 		 *  	* AOP설정 및 AppConfig에 추가 
 		 *  	* 공통로직이 적용된 상태로 실행되는 것을 확인
 		 */		
+		
+		ms.findMemberByAddress();
+		ps.findProductById();
+		System.out.println("***********************************");
+		//IOC 컨테이너를 이용하지 않고 객체 생성할 경우 - AOP 공통기능이 실행되지 않는다.
+		//AOP는 IOC를 전제로 한다.
+		MemberService testMs = new MemberServiceImpl();
+		testMs.findMemberByAddress();
+		System.out.println("***********************************");
 		ctx.close();
 	}
 }

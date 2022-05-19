@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>jquery function test</title>
+</head>
+<body>
+<img src="404error.png" id="imgView">
+<br>
+<button type="button" id="hideBtn">감추기</button>
+<button type="button" id="showBtn">보이기</button>
+<br>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#hideBtn").click(function(){
+			//delay, jquery 적용안될 경우 라이브러리 버전 확인!
+			$("#imgView").hide(2000, function(){
+				//버튼 숨기기
+				$("#hideBtn").hide();
+				$("#showBtn").show();
+			});
+			
+		});
+		$("#showBtn").click(function(){
+			//delay, jquery 적용안될 경우 라이브러리 버전 확인!
+			$("#imgView").show(2000, function(){
+				//버튼 숨기기
+				$("#hideBtn").show();
+				$("#showBtn").hide();
+			});
+		});
+	});
+</script>
+</body>
+</html>
