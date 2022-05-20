@@ -14,6 +14,7 @@ public class TestDI {
 		MemberService service = (MemberService) ctx.getBean("memberServiceImpl");
 		try {
 			System.out.println(service.findMemberById("java"));
+			System.out.println(service.getClass());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

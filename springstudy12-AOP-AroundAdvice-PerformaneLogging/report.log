@@ -1,0 +1,7 @@
+2022-29-20 12:29:06 ERROR test.DemoStopWatchService - test.DemoStopWatchService getList time: 1009
+2022-14-20 14:14:45 WARN  o.k.m.aop.PerformanceReportAspect - warning! : org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint findAllList time: 703
+2022-14-20 14:14:47 WARN  o.k.m.aop.PerformanceReportAspect - time error! : org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint findAllMember time: 1814
+2022-14-20 14:14:48 WARN  o.k.m.aop.PerformanceReportAspect - time error! : org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint register time: 1109
+2022-21-20 14:21:15 WARN  o.k.m.aop.PerformanceReportAspect - warning! : org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint findAllList time: 703
+2022-21-20 14:21:17 WARN  o.k.m.aop.PerformanceReportAspect - time error! : org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint findAllMember time: 1799
+2022-21-20 14:21:19 WARN  o.k.m.aop.PerformanceReportAspect - time error! : org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint register time: 1109

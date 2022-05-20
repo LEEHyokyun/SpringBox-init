@@ -1,6 +1,7 @@
 package test;
 
 import org.kosta.myproject.config.AppConfig;
+import org.kosta.myproject.model.CommunityService;
 import org.kosta.myproject.model.MemberService;
 import org.kosta.myproject.model.ProductService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -24,6 +25,13 @@ public class TestAOP {
 		ms.findMemberListByAddress("java");
 		ps.findProductListByMaker("java");
 		System.out.println("***************************");
+		//별도 인터페이스가 없어도 AOP 작동 가능, AOP를 적용할 경우 core 기능은 proxy에서 참조
+		CommunityService cs = (CommunityService) ctx.getBean("communityService");
+		//인터페이스가 없다면 proxy 객체를 불러오는 것이 아닌, 상속받은 별도의 객체를 불러온다
+		System.out.println(cs.getClass());
+		cs.findList("맥도날드");
+		cs.findListByUser("손흥민");
+		cs.register();
 		ctx.close();
 	}
 }

@@ -221,6 +221,7 @@
 		※ 인터페이스를 사용하지 않는다면 proxy가 memberservice(본쳬)를 상속받아 proxy 생성
 			ㄴ 그러나 보통은 인터페이스를 생성하는 것을 권장한다.
 	ㅁ 순수객체 생성시 proxy 동작이 안되므로, AOP 사용불가.
+	ㅁ proxy는 시스템 당 하나, Singleton - pointcut으로 지정한 객체에 대해서만 proxy가 참조하며 지정대상이 아니라면 일반 객체를 반환
 	
 ㅁ Logging - Log4j, Logback, Slf4j
 	ㅁ 로깅(Logging)
@@ -236,7 +237,12 @@
 		* SLF4J 방식은 로깅 구현체가 변경되어도, 별도 변경이 필요없다는 장점이 있다.	
 		* 로그레벨 : ERROR > WARN > INFO > DEBUG > TRACE
 
-
+ㅁ MyBatis Framework
+	ㅁ JDBC를 효과적으로 운영하기 위한 도구, proy 기법을 활용한다.
+		ㄴ SQL Mapper
+	ㅁ 영속성(Persistance layer) Framework
+	
+	
 ㅁ jQuery, Ajax
 	ㅁ 참고사항
 	* window load(javascript), jquery ready의 차이?

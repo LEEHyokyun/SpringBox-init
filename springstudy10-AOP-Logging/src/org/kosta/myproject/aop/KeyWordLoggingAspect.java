@@ -22,6 +22,10 @@ public class KeyWordLoggingAspect {
 		 * (..) : 매개변수 0~*
 		 */
 		private Logger logger = LoggerFactory.getLogger(getClass());
+		//After advice, 특정 시점에 공통 로직 기능을 적용, point cut으로 적용 클래스 및 메소드를 정의
+		//여기서 정의한 log를 AOP 및 IOC Container를 통해 적용
+		//기본적으로 IOC Container의 proxy 객체에서 인터페이스를 bean을 불러온다
+		//인터페이스가 없을 경우엔 proxy를 별도로 상속받은 객체를 불러온다
 		@After("execution(public * org.kosta.myproject.model..*Service.find*(..))")
 		public void logging(JoinPoint point) {
 			//JoinPoint - target 정보를 포함하는 객체

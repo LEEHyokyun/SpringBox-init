@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member">
+<!-- SQL정의, application load -->
+<sql id="selectMember">
+	select id, password, name, address from spring_member
+</sql>
+<select id="findMemberById" parameterType="string" resultType="MemberVO">
+	<include refid="selectMember"></include> where id=#{value}
+</select>
+<insert id="insertMember" parameterType="MemberVO">
+	insert into spring_member(id, password, name, address)
+	values(#{id}, #{password}, #{name}, #{address})
+</insert>
+<select id="findAllMemberList" resultType="MemberVO">
+	<include refid="selectMember"></include>
+</select>
+<update id="updateMember" parameterType="MemberVO">
+	update spring_member set name=#{name}, address=#{address} where id=#{id}
+</update>
+<delete id="deleteMemberByNameAndAddress" parameterType="MemberVO">
+	delete from spring_member
+	where name=#{name} and address=#{address}
+</delete>
+</mapper>
+<!-- 
+	result type -> 말 그대로 return, 결과값
+	parameter type-> 넘겨주는 data의 type, MemberVO/String 등 명기해줘야할 경우 명기한다.
+		ㄴ parameter type은 VO, Object, Map 등이 가능하다.
+		ㄴ 넘겨주는 매개인자는 VO가 될 수 있고, 구조체 형태인 Map 등이 될 수 있다.
+ -->

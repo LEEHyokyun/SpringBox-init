@@ -1,80 +1,10 @@
-14:27 DEBUG o.k.m.model.MemberServiceImpl - MemberService Impl finMemberListById 검색, 키워드: java
-14:27 DEBUG o.k.m.model.ProductServiceImpl - ProductService Impl findProductListByMaker 검색, 키워드: java
-14:29 DEBUG o.k.m.model.MemberServiceImpl - MemberService Impl finMemberListById 검색, 키워드: java
-14:29 DEBUG o.k.m.model.ProductServiceImpl - ProductService Impl findProductListByMaker 검색, 키워드: java
-2022-32-19 14:32:51 TRACE o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2a3b5b47, started on Thu May 19 14:32:51 KST 2022
-2022-32-19 14:32:51 DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
-2022-32-19 14:32:51 TRACE o.s.c.i.s.PathMatchingResourcePatternResolver - Resolved classpath location [org/kosta/myproject/] to resources [URL [file:/C:/kosta238/spring-worksapce1/springstudy08-AOP-ex/target/classes/org/kosta/myproject/]]
-2022-32-19 14:32:51 TRACE o.s.c.i.s.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\kosta238\spring-worksapce1\springstudy08-AOP-ex\target\classes\org\kosta\myproject]
-2022-32-19 14:32:51 TRACE o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [C:\kosta238\spring-worksapce1\springstudy08-AOP-ex\target\classes\org\kosta\myproject] for files matching pattern [C:/kosta238/spring-worksapce1/springstudy08-AOP-ex/target/classes/org/kosta/myproject/**/*.class]
-2022-32-19 14:32:51 TRACE o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [C:\kosta238\spring-worksapce1\springstudy08-AOP-ex\target\classes\org\kosta\myproject\config] for files matching pattern [C:/kosta238/spring-worksapce1/springstudy08-AOP-ex/target/classes/org/kosta/myproject/**/*.class]
-2022-32-19 14:32:51 TRACE o.s.c.i.s.PathMatchingResourcePatternResolver - Searching directory [C:\kosta238\spring-worksapce1\springstudy08-AOP-ex\target\classes\org\kosta\myproject\model] for files matching pattern [C:/kosta238/spring-worksapce1/springstudy08-AOP-ex/target/classes/org/kosta/myproject/**/*.class]
-2022-32-19 14:32:51 TRACE o.s.c.i.s.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:org/kosta/myproject/**/*.class] to resources [file [C:\kosta238\spring-worksapce1\springstudy08-AOP-ex\target\classes\org\kosta\myproject\config\AppConfig.class], file [C:\kosta238\spring-worksapce1\springstudy08-AOP-ex\target\classes\org\kosta\myproject\model\MemberService.class], file [C:\kosta238\spring-worksapce1\springstudy08-AOP-ex\target\classes\org\kosta\myproject\model\MemberServiceImpl.class], file [C:\kosta238\spring-worksapce1\springstudy08-AOP-ex\target\classes\org\kosta\myproject\model\ProductService.class], file [C:\kosta238\spring-worksapce1\springstudy08-AOP-ex\target\classes\org\kosta\myproject\model\ProductServiceImpl.class]]
-2022-32-19 14:32:51 TRACE o.s.c.a.ClassPathBeanDefinitionScanner - Scanning file [C:\kosta238\spring-worksapce1\springstudy08-AOP-ex\target\classes\org\kosta\myproject\config\AppConfig.class]
-2022-32-19 14:32:51 TRACE o.s.c.a.ClassPathBeanDefinitionScanner - Ignored because not matching any filter: file [C:\kosta238\spring-worksapce1\springstudy08-AOP-ex\target\classes\org\kosta\myproject\config\AppConfig.class]
-2022-32-19 14:32:51 TRACE o.s.c.a.ClassPathBeanDefinitionScanner - Scanning file [C:\kosta238\spring-worksapce1\springstudy08-AOP-ex\target\classes\org\kosta\myproject\model\MemberService.class]
-2022-32-19 14:32:51 TRACE o.s.c.a.ClassPathBeanDefinitionScanner - Ignored because not matching any filter: file [C:\kosta238\spring-worksapce1\springstudy08-AOP-ex\target\classes\org\kosta\myproject\model\MemberService.class]
-2022-32-19 14:32:51 TRACE o.s.c.a.ClassPathBeanDefinitionScanner - Scanning file [C:\kosta238\spring-worksapce1\springstudy08-AOP-ex\target\classes\org\kosta\myproject\model\MemberServiceImpl.class]
-2022-32-19 14:32:51 DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [C:\kosta238\spring-worksapce1\springstudy08-AOP-ex\target\classes\org\kosta\myproject\model\MemberServiceImpl.class]
-2022-32-19 14:32:51 TRACE o.s.c.a.ClassPathBeanDefinitionScanner - Scanning file [C:\kosta238\spring-worksapce1\springstudy08-AOP-ex\target\classes\org\kosta\myproject\model\ProductService.class]
-2022-32-19 14:32:51 TRACE o.s.c.a.ClassPathBeanDefinitionScanner - Ignored because not matching any filter: file [C:\kosta238\spring-worksapce1\springstudy08-AOP-ex\target\classes\org\kosta\myproject\model\ProductService.class]
-2022-32-19 14:32:51 TRACE o.s.c.a.ClassPathBeanDefinitionScanner - Scanning file [C:\kosta238\spring-worksapce1\springstudy08-AOP-ex\target\classes\org\kosta\myproject\model\ProductServiceImpl.class]
-2022-32-19 14:32:51 DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [C:\kosta238\spring-worksapce1\springstudy08-AOP-ex\target\classes\org\kosta\myproject\model\ProductServiceImpl.class]
-2022-32-19 14:32:51 TRACE o.s.c.a.ConfigurationClassEnhancer - Successfully enhanced org.kosta.myproject.config.AppConfig; enhanced class name is: org.kosta.myproject.config.AppConfig$$EnhancerBySpringCGLIB$$41bc99d7
-2022-32-19 14:32:51 TRACE o.s.c.a.ConfigurationClassPostProcessor - Replacing bean definition 'appConfig' existing class 'org.kosta.myproject.config.AppConfig' with enhanced class 'org.kosta.myproject.config.AppConfig$$EnhancerBySpringCGLIB$$41bc99d7'
-2022-32-19 14:32:51 DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.event.internalEventListenerProcessor'
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.event.internalEventListenerProcessor' to allow for resolving potential circular references
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.event.internalEventListenerProcessor'
-2022-32-19 14:32:51 DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.event.internalEventListenerFactory'
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.event.internalEventListenerFactory' to allow for resolving potential circular references
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.event.internalEventListenerFactory'
-2022-32-19 14:32:51 DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
-2022-32-19 14:32:51 TRACE o.s.c.a.AnnotationConfigApplicationContext - No 'messageSource' bean, using [Empty MessageSource]
-2022-32-19 14:32:51 TRACE o.s.c.a.AnnotationConfigApplicationContext - No 'applicationEventMulticaster' bean, using [SimpleApplicationEventMulticaster]
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@247310d0: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,appConfig,memberServiceImpl,productServiceImpl]; root of factory hierarchy
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
-2022-32-19 14:32:51 DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'appConfig'
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'appConfig'
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'appConfig' to allow for resolving potential circular references
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'appConfig'
-2022-32-19 14:32:51 DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'memberServiceImpl'
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'memberServiceImpl'
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'memberServiceImpl' to allow for resolving potential circular references
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'memberServiceImpl'
-2022-32-19 14:32:51 DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'productServiceImpl'
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Creating instance of bean 'productServiceImpl'
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Eagerly caching bean 'productServiceImpl' to allow for resolving potential circular references
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Finished creating instance of bean 'productServiceImpl'
-2022-32-19 14:32:51 TRACE o.s.c.e.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.kosta.myproject.config.AppConfig$$EnhancerBySpringCGLIB$$41bc99d7
-2022-32-19 14:32:51 TRACE o.s.c.e.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.kosta.myproject.model.MemberServiceImpl
-2022-32-19 14:32:51 TRACE o.s.c.e.EventListenerMethodProcessor - No @EventListener annotations found on bean class: org.kosta.myproject.model.ProductServiceImpl
-2022-32-19 14:32:51 TRACE o.s.c.a.AnnotationConfigApplicationContext - No 'lifecycleProcessor' bean, using [DefaultLifecycleProcessor]
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
-2022-32-19 14:32:51 TRACE o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties'
-2022-32-19 14:32:51 TRACE o.s.c.e.PropertySourcesPropertyResolver - Searching for key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemEnvironment'
-2022-32-19 14:32:51 TRACE o.s.c.e.PropertySourcesPropertyResolver - Could not find key 'spring.liveBeansView.mbeanDomain' in any property source
-2022-32-19 14:32:51 TRACE o.s.c.i.s.SpringFactoriesLoader - Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'memberServiceImpl'
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'productServiceImpl'
-2022-32-19 14:32:51 DEBUG o.k.m.model.MemberServiceImpl - MemberService Impl finMemberListById 검색, 키워드: java
-2022-32-19 14:32:51 DEBUG o.k.m.model.ProductServiceImpl - ProductService Impl findProductListByMaker 검색, 키워드: java
-2022-32-19 14:32:51 DEBUG o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@2a3b5b47, started on Thu May 19 14:32:51 KST 2022
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
-2022-32-19 14:32:51 TRACE o.s.b.f.s.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@247310d0: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,appConfig,memberServiceImpl,productServiceImpl]; root of factory hierarchy
-2022-25-19 15:25:57 INFO  o.k.m.aop.KeyWordLoggingAspect - AOP
-2022-25-19 15:25:57 INFO  o.k.m.aop.KeyWordLoggingAspect - AOP
-2022-30-19 15:30:20 INFO  o.k.m.aop.KeyWordLoggingAspect - core class : org.kosta.myproject.model.MemberServiceImpl, method name : findMemberListByAddress
-2022-30-19 15:30:20 INFO  o.k.m.aop.KeyWordLoggingAspect - core class : org.kosta.myproject.model.ProductServiceImpl, method name : findProductListByMaker
-2022-34-19 15:34:57 INFO  o.k.m.aop.KeyWordLoggingAspect - core class : org.kosta.myproject.model.MemberServiceImpl, method name : findMemberListByAddress, keyword: java 
-2022-34-19 15:34:57 INFO  o.k.m.aop.KeyWordLoggingAspect - core class : org.kosta.myproject.model.ProductServiceImpl, method name : findProductListByMaker, keyword: java 
+2022-09-20 10:09:39 INFO  o.k.m.aop.KeyWordLoggingAspect - core class : org.kosta.myproject.model.MemberServiceImpl, method name : findMemberListByAddress, keyword: java 
+2022-09-20 10:09:39 INFO  o.k.m.aop.KeyWordLoggingAspect - core class : org.kosta.myproject.model.ProductServiceImpl, method name : findProductListByMaker, keyword: java 
+2022-11-20 10:11:11 INFO  o.k.m.aop.KeyWordLoggingAspect - core class : org.kosta.myproject.model.MemberServiceImpl, method name : findMemberListByAddress, keyword: java 
+2022-11-20 10:11:11 INFO  o.k.m.aop.KeyWordLoggingAspect - core class : org.kosta.myproject.model.ProductServiceImpl, method name : findProductListByMaker, keyword: java 
+2022-11-20 10:11:11 INFO  o.k.m.aop.KeyWordLoggingAspect - core class : org.kosta.myproject.model.CommunityService, method name : findList, keyword: 맥도날드 
+2022-11-20 10:11:11 INFO  o.k.m.aop.KeyWordLoggingAspect - core class : org.kosta.myproject.model.CommunityService, method name : findListByUser, keyword: 손흥민 
+2022-13-20 10:13:56 INFO  o.k.m.aop.KeyWordLoggingAspect - core class : org.kosta.myproject.model.MemberServiceImpl, method name : findMemberListByAddress, keyword: java 
+2022-13-20 10:13:56 INFO  o.k.m.aop.KeyWordLoggingAspect - core class : org.kosta.myproject.model.ProductServiceImpl, method name : findProductListByMaker, keyword: java 
+2022-13-20 10:13:56 INFO  o.k.m.aop.KeyWordLoggingAspect - core class : org.kosta.myproject.model.CommunityService, method name : findList, keyword: 맥도날드 
+2022-13-20 10:13:56 INFO  o.k.m.aop.KeyWordLoggingAspect - core class : org.kosta.myproject.model.CommunityService, method name : findListByUser, keyword: 손흥민 
