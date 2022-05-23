@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>jquery form 요소 제어</title>
+<script type="text/javascript">
+	$(function(){
+		$("#testForm").submit(function(){
+			//jQuery val()을 통해 value set/get 가능!
+			//$("#userId").val("").focus();
+			//return confirm("전송하시겠습니까?"); //true - 전송, false - 미전송
+			/* if($("#hp").val()==""){
+				alert("통신사를 선택하세요!");
+			}else{
+				alert("선택 통신사 :"+$("#hp").val());
+			} */
+			// radio의 name이 여러개로 정의됨, 사용자가 입력한 value를 출력
+			/* let genderElement = $("#testForm :radio[name=gender]:checked").val();
+			//$("#testForm :radio[name=gender]:checked").length == 0 -> 성별을 선택하세요
+			console.log(genderElement); */
+			let hobbyElements = $("#testForm :checkBox[name=hobby]:checked");
+			//$("#testForm :checkBox[name=hobby] :checked").length == 0 -> 취미를 선택하세요
+			for(let i=0;i<hobbyElements.length;i++){
+				alert($(hobbyElements[i]).val());
+			}
+			return false;
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="container">
+		<form action="test.jsp" id="testForm">
+			아이디 <input type="text" id="userId" name="userId"><br>
+			<br> <select id="hp">
+				<option value="">--</option>
+				<option value="sk">sk</option>
+				<option value="kt">kt</option>
+				<option value="lg">lg</option>
+			</select><br>
+			<br> <input type="radio" name="gender" value="male">남 <input
+				type="radio" name="gender" value="female">여 <br>
+			<br>
+			<br> <input type="checkbox" name="hobby" value="노래">노래<br>
+			<input type="checkbox" name="hobby" value="코딩">코딩<br> <input
+				type="checkbox" name="hobby" value="독서">독서<br> <input
+				type="submit" value="전송">
+		</form>
+	</div>
+</body>
+</html>
