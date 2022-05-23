@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- Mapper Proxy를 사용하기 위해 Mapper Interface의 패키지명, 인터페이스명과 및 namespace 일치(경로도 반드시 체크) -->
+<mapper namespace="org.kosta.myproject.model.MemberMapper">
+	<select id="findAllMemberList" resultType="map">
+		select id, password, name, address from spring_member
+	</select>
+</mapper>

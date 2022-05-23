@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kosta.myproject.model.ProductMapper">
+	<select id="getTotalCount" resultType="int">
+		select COUNT(*) FROM SPRING_PRODUCT
+	</select>
+	<select id="findMakerList" resultType="string">
+		SELECT DISTINCT maker from spring_product
+	</select>
+	<sql id="selectProduct">
+		select product_no as productNo, name, maker, price FROM spring_product
+	</sql>
+	<select id="findProductByNo" parameterType="int" resultType="ProductVO">
+		<include refid="selectProduct" />
+		where product_no = #{productNo}
+	</select>
+	<select id="findProductListByMakerAndPrice" parameterType="ProductVO" resultType="ProductVO">
+		select product_no, name, maker, price FROM spring_product
+		where maker=#{maker} and price=#{price}
+	</select>
+	<select id="findProductListLessThanPrice" parameterType="int" resultType="ProductVO">
+		select product_no, name, maker, price FROM spring_product
+		<!-- 해당 영역에 기술된 내용은 tag가 아니라(<부분), Character Data임을 알린다. -->
+	<![CDATA[
+	where price < #{value}
+	]]></select>
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kosta.myproject.model.AccountMapper">
+	<!-- mapper namespace = AccountDAO 위치 -->
+	<insert id="registerAccount" parameterType="AccountVO">
+		insert into
+		spring_account(id, name, balance) values(#{id}, #{name}, #{balance})
+	</insert>
+	<insert id="registerAccountByMap" parameterType="map">
+		<!-- map -> typeAlias에서 기본적으로 제공하는 형태, hasmap도 가능하고 이의 상위 인터페이스인 map도 가능 -->
+		insert into spring_account(id, name, balance) values(#{ID}, #{NAME},
+		#{BALANCE})
+	</insert>
+	<select id="findAllAccountVOList" resultType="AccountVO">
+		SELECT id, name,
+		balance FROM spring_account
+	</select>
+	<select id="findAllAccountMapList" resultType="map">
+		SELECT id, name,
+		balance FROM spring_account
+	</select>
+</mapper>

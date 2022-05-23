@@ -13,7 +13,7 @@ public class TestMyBatis {
 		AnnotationConfigApplicationContext ctx = 
 				new AnnotationConfigApplicationContext(AppConfig.class);
 		MemberDAO dao = (MemberDAO) ctx.getBean("memberDAOImpl");
-		//System.out.println(dao.findMemberById("java"));
+		System.out.println(dao.findMemberById("java"));
 		
 		//회원정보 등록
 		
@@ -39,11 +39,12 @@ public class TestMyBatis {
 		 */
 		
 		  //회원정보삭제
-		  MemberVO paramVO = new MemberVO(null, null, "황의조", "성남");
-		  //VO대신 Map 형태로 전달가능
-		  dao.deleteMemberByNameAndAddress(paramVO);
-		  //System.out.println(dao.findMemberById("mybatis"));
-		  System.out.println("삭제완료");
+			/*
+			 * MemberVO paramVO = new MemberVO(null, null, "황의조", "성남"); //VO대신 Map 형태로 전달가능
+			 * dao.deleteMemberByNameAndAddress(paramVO);
+			 * //System.out.println(dao.findMemberById("mybatis"));
+			 * System.out.println("삭제완료");
+			 */
 		  
 		ctx.close();
 	
