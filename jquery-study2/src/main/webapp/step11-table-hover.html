@@ -10,6 +10,18 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>jquery table hover</title>
+<script type="text/javascript">
+	$(function(){
+		//memberbody tobdy 하위의 td 항목 선택
+		$("#membody td").hover(function(){
+			$(this).css("background", "yellow");	
+			$("#memInfo").text($(this).text());
+		}, function(){
+			$(this).css("background", "white");
+			$("#memInfo").text("");
+		});
+	});
+</script>
 </head>
 <body>
 	<div class="container">

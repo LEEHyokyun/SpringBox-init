@@ -15,6 +15,19 @@
 		background-color: lime;
 	}
 </style>
+<script type="text/javascript">
+	//testBtn 버튼 클릭시 자신의 value를 alert로 표기
+	$(function(){
+		$("#testBtn").click(function(){
+			//alert($(this).val());
+			$("#span1").append("가수");
+			//대상 요소의 하위(자식) 요소로 추가 <span>아이유 가수</span>
+			$("#span2").after("가수");
+			//대상 요소의 형제 요소로 추가 <span>아이유</span> 가수
+			$("a[href*=daum]").append("go");
+		});
+	});
+</script>
 </head>
 <body>
 <div class="container">

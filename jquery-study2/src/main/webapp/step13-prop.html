@@ -8,6 +8,19 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>jquery prop</title>
 </head>
+<script type="text/javascript">
+	$(function(){
+		$("#checkBtn1").click(function(){
+			$("#mailing").prop("checked", true);
+		});
+		$("#checkBtn2").click(function(){
+			$("#mailing").prop("checked", false);
+		});
+		$("#checkBtn3").click(function(){
+			alert($("#mailing").prop("checked"));
+		});
+	});
+</script>
 <body>
 <div class="container">
 <input type="checkbox" id="mailing">메일체크<br>

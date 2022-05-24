@@ -7,6 +7,23 @@
 <script 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>step20-jquery-event</title>
+<script type="text/javascript">
+	$(function(){
+		$(".testEvent").click(function(event){
+			let checked = $("#termsChk").prop("checked");
+			if(checked){
+				//동의
+				return true;
+			}else{
+				//미동의
+				alert("약관에 동의하셔야 다음 페이지로 이동할 수 있습니다.");
+				//return false;
+				event.preventDefault();
+			}	
+		});
+		
+	});
+</script>
 </head>
 <body>
 	<div class="container">

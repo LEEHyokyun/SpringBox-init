@@ -7695,3 +7695,7 @@ org.eclipse.core.runtime.CoreException: Launch configuration TestStopWatch refer
 2022-05-24 15:48:49,283 [Worker-101: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\kosta238\spring-worksapce1\springstudy17-mybatis-join\src\test\resources
 2022-05-24 15:50:16,934 [Worker-100: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2022-05-24 15:50:16,936 [Worker-100: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\kosta238\spring-worksapce1\springstudy17-mybatis-join\src\main\resources
+2022-05-24 15:50:16,937 [Worker-100: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-24 15:50:16,939 [Worker-100: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\kosta238\spring-worksapce1\springstudy17-mybatis-join\src\test\resources
+2022-05-24 16:11:11,407 [Worker-111: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-24 16:11:11,409 [Worker-111: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\kosta238\spring-worksapce1\springstudy17-mybatis-join\src\main\resources

@@ -7,6 +7,22 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>jquery-event</title>
+<!-- 
+	이벤트 버블링 
+	: 하위 요소를 포함하는 상위 요소에 대해 이벤트를 바인딩할 경우,
+	  하위 요소에 대해 이벤트 실행시 상위요소분 까지 중복되어 이벤트가 발생한다.
+	$("#.pro").click(function(event){
+		alert("click event");
+	});
+ -->
+<script type="text/javascript">
+	$(function(){
+		$(".pro").click(function(event){
+			alert("click event!");
+			event.stopPropagation();	
+		});
+	});
+</script>
 <style type="text/css">
 	.pro{
 		background-color: lime;

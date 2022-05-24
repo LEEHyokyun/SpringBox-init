@@ -10,6 +10,24 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>checkbox</title>
+<script type="text/javascript">
+	$(function(){
+		$("#menuForm").submit(function(){
+			let menuLists = $("#menuForm :checkBox[name=menu]:checked");
+			if(menuLists.length == 0){
+				alert("메뉴를 선택하세요!");
+				return false;
+			}else{
+				let info="";
+				for(let i=0;i<menuLists.length;i++){
+					//javscript object -> string
+					info = info + $(menuLists[i]).val()+" ";
+				}
+				return confirm(info+"주문하시겠습니까?");
+			}
+		});
+	});
+</script>
 </head>
 <body>
 	<div class="container">
