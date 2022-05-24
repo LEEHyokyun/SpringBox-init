@@ -1,0 +1,18 @@
+2022-07-24 14:07:57 DEBUG o.k.m.m.H.findAllDepartmentList - ==>  Preparing: select deptno, dname, loc from spring_department
+2022-07-24 14:07:58 DEBUG o.k.m.m.H.findAllDepartmentList - ==> Parameters: 
+2022-07-24 14:07:58 DEBUG o.k.m.m.H.findAllDepartmentList - <==      Total: 3
+2022-19-24 14:19:48 DEBUG o.k.m.m.H.findEmployeeAndDepartmentByEmpNo - ==>  Preparing: select se.ename, sd.dname, sd.loc from spring_employee se inner join spring_department sd on sd.deptno = se.deptno
+2022-19-24 14:19:48 DEBUG o.k.m.m.H.findEmployeeAndDepartmentByEmpNo - ==> Parameters: 
+2022-19-24 14:19:49 DEBUG o.k.m.m.H.findEmployeeAndDepartmentByEmpNo - <==      Total: 4
+2022-20-24 14:20:48 DEBUG o.k.m.m.H.findEmployeeAndDepartmentByEmpNo - ==>  Preparing: select se.ename, sd.dname, sd.loc from spring_employee se inner join spring_department sd on sd.deptno = se.deptno where se.empno = ?
+2022-20-24 14:20:48 DEBUG o.k.m.m.H.findEmployeeAndDepartmentByEmpNo - ==> Parameters: 1(Integer)
+2022-20-24 14:20:48 DEBUG o.k.m.m.H.findEmployeeAndDepartmentByEmpNo - <==      Total: 1
+2022-09-24 15:09:40 DEBUG o.k.m.m.H.findEmployeeAndDepartmentByEmpNo - ==>  Preparing: select se.ename, sd.dname, sd.loc from spring_employee se inner join spring_department sd on sd.deptno = se.deptno where se.empno = ?
+2022-09-24 15:09:40 DEBUG o.k.m.m.H.findEmployeeAndDepartmentByEmpNo - ==> Parameters: 1(Integer)
+2022-09-24 15:09:40 DEBUG o.k.m.m.H.findEmployeeAndDepartmentByEmpNo - <==      Total: 1
+2022-14-24 15:14:41 DEBUG o.k.m.m.H.findEmpAndDeptListOuterJoin - ==>  Preparing: select se.empno, se.ename, sd.deptno, sd.dname from spring_department sd left outer join spring_employee se on sd.deptno = se.deptno
+2022-14-24 15:14:41 DEBUG o.k.m.m.H.findEmpAndDeptListOuterJoin - ==> Parameters: 
+2022-14-24 15:14:41 DEBUG o.k.m.m.H.findEmpAndDeptListOuterJoin - <==      Total: 5
+2022-50-24 15:50:28 DEBUG o.k.m.m.H.findEmpAndDeptGroupByDeptNo - ==>  Preparing: select d.deptno, d.dname, nvl(g.emp_count, 0) as emp_count from( select deptno, count(*) as emp_count from spring_employee group by deptno ) g right outer join spring_department d on g.deptno = d.deptno order by d.deptno desc
+2022-50-24 15:50:28 DEBUG o.k.m.m.H.findEmpAndDeptGroupByDeptNo - ==> Parameters: 
+2022-50-24 15:50:28 DEBUG o.k.m.m.H.findEmpAndDeptGroupByDeptNo - <==      Total: 3

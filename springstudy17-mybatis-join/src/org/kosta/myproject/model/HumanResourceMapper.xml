@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kosta.myproject.model.HumanResourceMapper">
+	<select id="findAllDepartmentList" resultType="map">
+		select deptno, dname, loc
+		from spring_department
+	</select>
+	<select id="findEmployeeAndDepartmentByEmpNo" parameterType="int" resultType="map">
+		select se.ename, sd.dname, sd.loc
+		from spring_employee se 
+		inner join spring_department sd
+		on sd.deptno = se.deptno 
+		where se.empno = #{empno}
+	</select>
+	<select id="findEmpAndDeptListOuterJoin" resultType="map">
+		select se.empno, se.ename, sd.deptno, sd.dname
+		from spring_department sd
+		left outer join spring_employee se 
+		on sd.deptno = se.deptno
+	</select>
+	<select id="findEmpAndDeptGroupByDeptNo" resultType="map">
+		select d.deptno, d.dname, nvl(g.emp_count, 0) as emp_count
+		from(
+		select deptno, count(*) as emp_count
+		from spring_employee
+		group by deptno
+		) g
+		right outer join spring_department d
+		on g.deptno = d.deptno
+		order by d.deptno desc
+	</select>
+</mapper>
