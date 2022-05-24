@@ -24,4 +24,33 @@
 	<![CDATA[
 	where price < #{value}
 	]]></select>
+	<select id="findProductListByLowPriceAndHighPrice" parameterType="map" resultType="ProductVO">
+		select product_no, name, maker, price FROM spring_product
+	<![CDATA[
+		where price > ${LOWPRICE} AND price < #{HIGHPRICE} 
+	]]></select>
+	<select id="findProductListLikeKeyword" parameterType="string" resultType="ProductVO">
+		select product_no, name, maker, price FROM spring_product
+		where name LIKE '%' || #{keyword} || '%'
+	</select>
+	<select id="findAllProductListOrderByNoDesc" resultType="ProductVO">
+		select product_no, name, maker, price FROM spring_product
+		order by product_no desc
+	</select>
+	<insert id="registerProduct" parameterType="ProductVO">
+		insert into spring_product(product_no, name, maker, price)
+		values(spring_product_seq.nextval, #{name}, #{maker}, #{price})
+	</insert>
+	<insert id="registerProductWithSequence" parameterType="ProductVO">
+		insert into spring_product(product_no, name, maker, price)
+		values(spring_product_seq.nextval, #{name}, #{maker}, #{price})
+		<selectKey keyProperty="productNo" resultType="int" order="AFTER">
+			<!-- sql 실행후 현재 seq value 추출가능 및 VO로 설정(set) 가능 -->
+			SELECT spring_product_seq.currval from dual 
+		</selectKey>
+	</insert>
+	<delete id="deleteProductByMaker" parameterType="string">
+		delete from spring_product
+		where maker=#{maker}
+	</delete>
 </mapper>

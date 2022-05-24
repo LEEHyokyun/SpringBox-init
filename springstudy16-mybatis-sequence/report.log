@@ -1,47 +1,53 @@
-2022-22-23 15:22:39 DEBUG o.k.m.m.ProductMapper.getTotalCount - ==>  Preparing: select COUNT(*) FROM SPRING_COUNT
-2022-22-23 15:22:39 DEBUG o.k.m.m.ProductMapper.getTotalCount - ==> Parameters: 
-2022-22-23 15:22:54 DEBUG o.k.m.m.ProductMapper.getTotalCount - ==>  Preparing: select COUNT(*) FROM SPRING_PRODUCT
-2022-22-23 15:22:54 DEBUG o.k.m.m.ProductMapper.getTotalCount - ==> Parameters: 
-2022-22-23 15:22:54 DEBUG o.k.m.m.ProductMapper.getTotalCount - <==      Total: 1
-2022-31-23 15:31:01 DEBUG o.k.m.m.ProductMapper.findMakerList - ==>  Preparing: SELECT DISTINCT maker from spring_product
-2022-31-23 15:31:01 DEBUG o.k.m.m.ProductMapper.findMakerList - ==> Parameters: 
-2022-31-23 15:31:01 DEBUG o.k.m.m.ProductMapper.findMakerList - <==      Total: 2
-2022-43-23 15:43:18 DEBUG o.k.m.m.P.findProductByNo - ==>  Preparing: select product_no, name, maker, price FROM spring_product where product_no = 1;
-2022-43-23 15:43:19 DEBUG o.k.m.m.P.findProductByNo - ==> Parameters: 
-2022-44-23 15:44:00 DEBUG o.k.m.m.P.findProductByNo - ==>  Preparing: select product_no, name, maker, price FROM spring_product where product_no = ?;
-2022-44-23 15:44:00 DEBUG o.k.m.m.P.findProductByNo - ==> Parameters: 1(Integer)
-2022-45-23 15:45:33 DEBUG o.k.m.m.P.findProductByNo - ==>  Preparing: select product_no, name, maker, price FROM spring_product where product_no = ?;
-2022-45-23 15:45:33 DEBUG o.k.m.m.P.findProductByNo - ==> Parameters: 1(Integer)
-2022-46-23 15:46:04 DEBUG o.k.m.m.P.findProductByNo - ==>  Preparing: select product_no, name, maker, price FROM spring_product where product_no = ?;
-2022-46-23 15:46:04 DEBUG o.k.m.m.P.findProductByNo - ==> Parameters: 1(Integer)
-2022-46-23 15:46:20 DEBUG o.k.m.m.P.findProductByNo - ==>  Preparing: select product_no, name, maker, price FROM spring_product where product_no = ?
-2022-46-23 15:46:20 DEBUG o.k.m.m.P.findProductByNo - ==> Parameters: 1(Integer)
-2022-46-23 15:46:20 DEBUG o.k.m.m.P.findProductByNo - <==      Total: 1
-2022-47-23 15:47:06 DEBUG o.k.m.m.P.findProductByNo - ==>  Preparing: select product_no as productNo, name, maker, price FROM spring_product where product_no = ?
-2022-47-23 15:47:06 DEBUG o.k.m.m.P.findProductByNo - ==> Parameters: 1(Integer)
-2022-47-23 15:47:06 DEBUG o.k.m.m.P.findProductByNo - <==      Total: 1
-2022-47-23 15:47:36 DEBUG o.k.m.m.P.findProductByNo - ==>  Preparing: select product_no, name, maker, price FROM spring_product where product_no = ?
-2022-47-23 15:47:37 DEBUG o.k.m.m.P.findProductByNo - ==> Parameters: 1(Integer)
-2022-47-23 15:47:37 DEBUG o.k.m.m.P.findProductByNo - <==      Total: 1
-2022-47-23 15:47:42 DEBUG o.k.m.m.P.findProductByNo - ==>  Preparing: select product_no as productNo, name, maker, price FROM spring_product where product_no = ?
-2022-47-23 15:47:42 DEBUG o.k.m.m.P.findProductByNo - ==> Parameters: 1(Integer)
-2022-47-23 15:47:42 DEBUG o.k.m.m.P.findProductByNo - <==      Total: 1
-2022-04-23 16:04:08 DEBUG o.k.m.m.P.findProductByNo - ==>  Preparing: select product_no as productNo, name, maker, price FROM spring_product where product_no = ?
-2022-04-23 16:04:08 DEBUG o.k.m.m.P.findProductByNo - ==> Parameters: 1(Integer)
-2022-04-23 16:04:08 DEBUG o.k.m.m.P.findProductByNo - <==      Total: 1
-2022-12-23 16:12:05 DEBUG o.k.m.m.P.findProductListByMakerAndPrice - ==>  Preparing: select product_no as productNo, name, maker, price FROM spring_product where maker=? and price=?
-2022-12-23 16:12:05 DEBUG o.k.m.m.P.findProductListByMakerAndPrice - ==> Parameters: 애플(String), 30(Integer)
-2022-14-23 16:14:39 DEBUG o.k.m.m.P.findProductListByMakerAndPrice - ==>  Preparing: select product_no as productNo, name, maker, price FROM spring_product where maker=? and price=?
-2022-14-23 16:14:40 DEBUG o.k.m.m.P.findProductListByMakerAndPrice - ==> Parameters: 애플(String), 30(Integer)
-2022-14-23 16:14:40 DEBUG o.k.m.m.P.findProductListByMakerAndPrice - <==      Total: 0
-2022-16-23 16:16:28 DEBUG o.k.m.m.P.findProductListByMakerAndPrice - ==>  Preparing: select product_no as productNo, name, maker, price FROM spring_product where maker=? and price=?
-2022-16-23 16:16:28 DEBUG o.k.m.m.P.findProductListByMakerAndPrice - ==> Parameters: 애플(String), 50(Integer)
-2022-16-23 16:16:28 DEBUG o.k.m.m.P.findProductListByMakerAndPrice - <==      Total: 1
-2022-31-23 16:31:07 DEBUG o.k.m.m.P.findProductListByMakerAndPrice - ==>  Preparing: select product_no, name, maker, price FROM spring_product where maker=? and price=?
-2022-31-23 16:31:07 DEBUG o.k.m.m.P.findProductListByMakerAndPrice - ==> Parameters: 애플(String), 50(Integer)
-2022-31-23 16:31:07 DEBUG o.k.m.m.P.findProductListByMakerAndPrice - <==      Total: 1
-2022-36-23 16:36:02 ERROR o.m.spring.mapper.MapperFactoryBean - Error while adding the mapper 'interface org.kosta.myproject.model.ProductMapper' to configuration.
-org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 23; columnNumber: 16; The content of elements must consist of well-formed character data or markup.
+2022-09-24 10:09:33 DEBUG o.k.m.m.P.findProductListByLowPriceAndHighPrice - ==>  Preparing: select product_no, name, maker, price FROM spring_product where price > 40 AND price < ?
+2022-09-24 10:09:33 DEBUG o.k.m.m.P.findProductListByLowPriceAndHighPrice - ==> Parameters: 140(Integer)
+2022-09-24 10:09:33 DEBUG o.k.m.m.P.findProductListByLowPriceAndHighPrice - <==      Total: 3
+2022-11-24 10:11:30 ERROR o.m.spring.mapper.MapperFactoryBean - Error while adding the mapper 'interface org.kosta.myproject.model.ProductMapper' to configuration.
+org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'org/kosta/myproject/model/ProductMapper.xml'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'paramMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: paramMap
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:179)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:118)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:841)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:81)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:89)
+	at test.TestSpringMyBatis.main(TestSpringMyBatis.java:15)
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'paramMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: paramMap
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:76)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:138)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:131)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:121)
+	... 20 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'paramMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: paramMap
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 24 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: paramMap
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:196)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 26 common frames omitted
+2022-11-24 10:11:30 WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productMapper' defined in file [C:\kosta238\spring-worksapce1\springstudy16-mybatis-sequence\target\classes\org\kosta\myproject\model\ProductMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'org/kosta/myproject/model/ProductMapper.xml'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'paramMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: paramMap
+2022-11-24 10:11:43 DEBUG o.k.m.m.P.findProductListByLowPriceAndHighPrice - ==>  Preparing: select product_no, name, maker, price FROM spring_product where price > 40 AND price < ?
+2022-11-24 10:11:43 DEBUG o.k.m.m.P.findProductListByLowPriceAndHighPrice - ==> Parameters: 140(Integer)
+2022-11-24 10:11:43 DEBUG o.k.m.m.P.findProductListByLowPriceAndHighPrice - <==      Total: 3
+2022-36-24 10:36:00 ERROR o.m.spring.mapper.MapperFactoryBean - Error while adding the mapper 'interface org.kosta.myproject.model.ProductMapper' to configuration.
+org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 32; columnNumber: 87; Attribute "paramterType" must be declared for element type "select".
 	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
 	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
 	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:81)
@@ -64,15 +70,18 @@ org.apache.ibatis.builder.BuilderException: Error creating document instance.  C
 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
 	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:89)
-	at test.TestSpringMyBatis.main(TestSpringMyBatis.java:13)
-Caused by: org.xml.sax.SAXParseException: The content of elements must consist of well-formed character data or markup.
+	at test.TestSpringMyBatis.main(TestSpringMyBatis.java:15)
+Caused by: org.xml.sax.SAXParseException: Attribute "paramterType" must be declared for element type "select".
 	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
-	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
 	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1471)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.startOfMarkup(XMLDocumentFragmentScannerImpl.java:2571)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2661)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.addDTDDefaultAttrsAndValidate(XMLDTDValidator.java:1237)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.handleStartElement(XMLDTDValidator.java:1846)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:728)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1397)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2708)
 	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
 	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:534)
 	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
@@ -82,9 +91,9 @@ Caused by: org.xml.sax.SAXParseException: The content of elements must consist o
 	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
 	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
 	... 22 common frames omitted
-2022-36-23 16:36:02 WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productMapper' defined in file [C:\kosta238\spring-worksapce1\springstudy16-mybatis-sequence\target\classes\org\kosta\myproject\model\ProductMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 23; columnNumber: 16; The content of elements must consist of well-formed character data or markup.
-2022-36-23 16:36:46 ERROR o.m.spring.mapper.MapperFactoryBean - Error while adding the mapper 'interface org.kosta.myproject.model.ProductMapper' to configuration.
-org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 23; columnNumber: 16; The content of elements must consist of well-formed character data or markup.
+2022-36-24 10:36:00 WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productMapper' defined in file [C:\kosta238\spring-worksapce1\springstudy16-mybatis-sequence\target\classes\org\kosta\myproject\model\ProductMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 32; columnNumber: 87; Attribute "paramterType" must be declared for element type "select".
+2022-36-24 10:36:16 ERROR o.m.spring.mapper.MapperFactoryBean - Error while adding the mapper 'interface org.kosta.myproject.model.ProductMapper' to configuration.
+org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 32; columnNumber: 87; Attribute "paramterType" must be declared for element type "select".
 	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
 	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
 	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:81)
@@ -107,15 +116,18 @@ org.apache.ibatis.builder.BuilderException: Error creating document instance.  C
 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
 	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:89)
-	at test.TestSpringMyBatis.main(TestSpringMyBatis.java:13)
-Caused by: org.xml.sax.SAXParseException: The content of elements must consist of well-formed character data or markup.
+	at test.TestSpringMyBatis.main(TestSpringMyBatis.java:15)
+Caused by: org.xml.sax.SAXParseException: Attribute "paramterType" must be declared for element type "select".
 	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
-	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
 	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1471)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.startOfMarkup(XMLDocumentFragmentScannerImpl.java:2571)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2661)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.addDTDDefaultAttrsAndValidate(XMLDTDValidator.java:1237)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.handleStartElement(XMLDTDValidator.java:1846)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:728)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1397)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2708)
 	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
 	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:534)
 	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
@@ -125,93 +137,37 @@ Caused by: org.xml.sax.SAXParseException: The content of elements must consist o
 	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
 	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
 	... 22 common frames omitted
-2022-36-23 16:36:46 WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productMapper' defined in file [C:\kosta238\spring-worksapce1\springstudy16-mybatis-sequence\target\classes\org\kosta\myproject\model\ProductMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 23; columnNumber: 16; The content of elements must consist of well-formed character data or markup.
-2022-38-23 16:38:24 ERROR o.m.spring.mapper.MapperFactoryBean - Error while adding the mapper 'interface org.kosta.myproject.model.ProductMapper' to configuration.
-org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 23; columnNumber: 16; The content of elements must consist of well-formed character data or markup.
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
-	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:81)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:76)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:178)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:118)
-	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
-	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:841)
-	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:81)
-	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:878)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
-	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:89)
-	at test.TestSpringMyBatis.main(TestSpringMyBatis.java:13)
-Caused by: org.xml.sax.SAXParseException: The content of elements must consist of well-formed character data or markup.
-	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
-	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1471)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.startOfMarkup(XMLDocumentFragmentScannerImpl.java:2571)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2661)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:534)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
-	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
-	... 22 common frames omitted
-2022-38-23 16:38:24 WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productMapper' defined in file [C:\kosta238\spring-worksapce1\springstudy16-mybatis-sequence\target\classes\org\kosta\myproject\model\ProductMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 23; columnNumber: 16; The content of elements must consist of well-formed character data or markup.
-2022-38-23 16:38:49 ERROR o.m.spring.mapper.MapperFactoryBean - Error while adding the mapper 'interface org.kosta.myproject.model.ProductMapper' to configuration.
-org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 23; columnNumber: 16; The content of elements must consist of well-formed character data or markup.
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
-	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:81)
-	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:76)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:178)
-	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:118)
-	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
-	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:841)
-	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:81)
-	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:878)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
-	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:89)
-	at test.TestSpringMyBatis.main(TestSpringMyBatis.java:13)
-Caused by: org.xml.sax.SAXParseException: The content of elements must consist of well-formed character data or markup.
-	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
-	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1471)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.startOfMarkup(XMLDocumentFragmentScannerImpl.java:2571)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2661)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
-	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:534)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
-	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
-	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
-	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
-	... 22 common frames omitted
-2022-38-23 16:38:49 WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productMapper' defined in file [C:\kosta238\spring-worksapce1\springstudy16-mybatis-sequence\target\classes\org\kosta\myproject\model\ProductMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 23; columnNumber: 16; The content of elements must consist of well-formed character data or markup.
-2022-42-23 16:42:59 DEBUG o.k.m.m.P.findProductListLessThanPrice - ==>  Preparing: select product_no, name, maker, price FROM spring_product where price < ?
-2022-42-23 16:42:59 DEBUG o.k.m.m.P.findProductListLessThanPrice - ==> Parameters: 100(Integer)
-2022-42-23 16:42:59 DEBUG o.k.m.m.P.findProductListLessThanPrice - <==      Total: 2
+2022-36-24 10:36:16 WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productMapper' defined in file [C:\kosta238\spring-worksapce1\springstudy16-mybatis-sequence\target\classes\org\kosta\myproject\model\ProductMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 32; columnNumber: 87; Attribute "paramterType" must be declared for element type "select".
+2022-38-24 10:38:30 DEBUG o.k.m.m.P.findProductListLikeKeyword - ==>  Preparing: select product_no, name, maker, price FROM spring_product where name LIKE '%' || ? || '%'
+2022-38-24 10:38:30 DEBUG o.k.m.m.P.findProductListLikeKeyword - ==> Parameters: 이(String)
+2022-38-24 10:38:30 DEBUG o.k.m.m.P.findProductListLikeKeyword - <==      Total: 3
+2022-40-24 10:40:38 DEBUG o.k.m.m.P.findAllProductListOrderByNoDesc - ==>  Preparing: select product_no, name, maker, price FROM spring_product order by product_no desc
+2022-40-24 10:40:38 DEBUG o.k.m.m.P.findAllProductListOrderByNoDesc - ==> Parameters: 
+2022-40-24 10:40:39 DEBUG o.k.m.m.P.findAllProductListOrderByNoDesc - <==      Total: 5
+2022-08-24 11:08:28 DEBUG o.k.m.m.P.registerProduct - ==>  Preparing: insert into spring_product(product_no, name, maker, price) values(spring_product_seq.nextval, ?, ?, ?)
+2022-08-24 11:08:28 DEBUG o.k.m.m.P.registerProduct - ==> Parameters: 3분카레(String), 오뚜기(String), 1300(Integer)
+2022-08-24 11:08:28 DEBUG o.k.m.m.P.registerProduct - <==    Updates: 1
+2022-14-24 11:14:52 DEBUG o.k.m.m.P.findAllProductListOrderByNoDesc - ==>  Preparing: select product_no, name, maker, price FROM spring_product order by product_no desc
+2022-14-24 11:14:52 DEBUG o.k.m.m.P.findAllProductListOrderByNoDesc - ==> Parameters: 
+2022-14-24 11:14:52 DEBUG o.k.m.m.P.findAllProductListOrderByNoDesc - <==      Total: 6
+2022-15-24 11:15:34 DEBUG o.k.m.m.P.registerProduct - ==>  Preparing: insert into spring_product(product_no, name, maker, price) values(spring_product_seq.nextval, ?, ?, ?)
+2022-15-24 11:15:34 DEBUG o.k.m.m.P.registerProduct - ==> Parameters: 3분짜장(String), 오뚜기(String), 1300(Integer)
+2022-15-24 11:15:34 DEBUG o.k.m.m.P.registerProduct - <==    Updates: 1
+2022-23-24 11:23:55 DEBUG o.k.m.m.P.registerProductWithSequence - ==>  Preparing: insert into spring_product(product_no, name, maker, price) values(spring_product_seq.nextval, ?, ?, ?)
+2022-23-24 11:23:55 DEBUG o.k.m.m.P.registerProductWithSequence - ==> Parameters: 3분 스파게티(String), 오뚜기(String), 1500(Integer)
+2022-23-24 11:23:55 DEBUG o.k.m.m.P.registerProductWithSequence - <==    Updates: 1
+2022-23-24 11:23:55 DEBUG o.k.m.m.P.registerProductWithSequence!selectKey - ==>  Preparing: SELECT spring_product_seq.currval from dual
+2022-23-24 11:23:55 DEBUG o.k.m.m.P.registerProductWithSequence!selectKey - ==> Parameters: 
+2022-23-24 11:23:55 DEBUG o.k.m.m.P.registerProductWithSequence!selectKey - <==      Total: 1
+2022-24-24 11:24:42 DEBUG o.k.m.m.P.registerProductWithSequence - ==>  Preparing: insert into spring_product(product_no, name, maker, price) values(spring_product_seq.nextval, ?, ?, ?)
+2022-24-24 11:24:42 DEBUG o.k.m.m.P.registerProductWithSequence - ==> Parameters: 3분 라자냐(String), 오뚜기(String), 1500(Integer)
+2022-24-24 11:24:42 DEBUG o.k.m.m.P.registerProductWithSequence - <==    Updates: 1
+2022-24-24 11:24:42 DEBUG o.k.m.m.P.registerProductWithSequence!selectKey - ==>  Preparing: SELECT spring_product_seq.currval from dual
+2022-24-24 11:24:42 DEBUG o.k.m.m.P.registerProductWithSequence!selectKey - ==> Parameters: 
+2022-24-24 11:24:42 DEBUG o.k.m.m.P.registerProductWithSequence!selectKey - <==      Total: 1
+2022-31-24 11:31:36 DEBUG o.k.m.m.P.deleteProductByMaker - ==>  Preparing: delete from spring_product where maker=?
+2022-31-24 11:31:36 DEBUG o.k.m.m.P.deleteProductByMaker - ==> Parameters: 오뚜기(String)
+2022-31-24 11:31:36 DEBUG o.k.m.m.P.deleteProductByMaker - <==    Updates: 4
+2022-31-24 11:31:36 DEBUG o.k.m.m.P.findAllProductListOrderByNoDesc - ==>  Preparing: select product_no, name, maker, price FROM spring_product order by product_no desc
+2022-31-24 11:31:36 DEBUG o.k.m.m.P.findAllProductListOrderByNoDesc - ==> Parameters: 
+2022-31-24 11:31:36 DEBUG o.k.m.m.P.findAllProductListOrderByNoDesc - <==      Total: 5

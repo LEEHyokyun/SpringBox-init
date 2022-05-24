@@ -18,6 +18,13 @@ public class ProductVO {
 		this.maker = maker;
 		this.price = price;
 	}
+	
+	public ProductVO(String name, String maker, int price) {
+		super();
+		this.name = name;
+		this.maker = maker;
+		this.price = price;
+	}
 
 	public int getProductNo() {
 		return productNo;

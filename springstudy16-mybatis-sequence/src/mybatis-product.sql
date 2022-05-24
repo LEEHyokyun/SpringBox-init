@@ -26,5 +26,8 @@ where product_no = 1;
 select product_no, name, maker, price FROM spring_product
 where maker='애플' and price=50; 
 
+select product_no, name, maker, price FROM spring_product
+where price > 40 AND price < 140 
 
-
+select product_no, name, maker, price FROM spring_product
+where name like '%아%'
