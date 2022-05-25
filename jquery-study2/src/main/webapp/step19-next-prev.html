@@ -7,6 +7,26 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>jquery next-prev</title>
+<script type="text/javascript">
+	$(function(){
+		//데이터 추가
+		$("#infoDiv .desc").click(function(){
+			$(this).next().text($(this).text());
+		});
+		
+		//데이터 삭제
+		$("#deleteAllBtn").click(function(){
+			//infoDiv div요소의 하위요소 중 desc class 요소의 다음 요소
+			//해당 요소의 text(글자)를 모두 공란으로 비운다.
+			$("#infoDiv .desc").next().text("");
+		});
+		
+		//prevBtn 클릭시 해당 요소의 이전 이전 요소의 글자(text)를 출력
+		$("#prevBtn").click(function(){
+			alert($(this).prev().prev().prev().text());
+		});
+	});
+</script>
 </head>
 <body>
 <div class="container">

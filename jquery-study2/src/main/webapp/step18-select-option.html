@@ -7,6 +7,33 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>select-option</title>
+<script type="text/javascript">
+	$(function(){
+		let arr = ["손흥민", "황의조", "이강인"];
+		//자식요소 생성
+		$("#createOption").click(function(){
+			for(let i=0;i<arr.length;i++){
+				$("#friend").append("<option value="+arr[i]+">"+arr[i]+"</option>");
+			}
+		});
+		
+		//자식요소 제거
+		$("#deleteOption").click(function(){
+			$("#friend").empty();
+		});
+		
+		//ECMA6 - set을 활용하여 데이터 중복 제거
+		$("#setBtn").click(function(){
+			let set = new Set();
+			set.add("손흥민");
+			set.add("이강인");
+			set.add("황의조");
+			for(let data of set){
+				alert(data);
+			}
+		});
+	});
+</script>
 </head>
 <body>
 <div class="container">
