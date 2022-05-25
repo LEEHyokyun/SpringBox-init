@@ -1,0 +1,36 @@
+2022-28-25 11:28:04 DEBUG o.k.m.m.m.DirectorMapper.register - ==>  Preparing: INSERT INTO director(director_id, director_name, intro) VALUES(director_seq, ?, ?)
+2022-28-25 11:28:04 DEBUG o.k.m.m.m.DirectorMapper.register - ==> Parameters: 봉준호(String), 아카데미상 수상(String)
+2022-30-25 11:30:21 DEBUG o.k.m.m.m.DirectorMapper.register - ==>  Preparing: INSERT INTO director(director_id, director_name, intro) VALUES(director_seq.nextval, ?, ?)
+2022-30-25 11:30:21 DEBUG o.k.m.m.m.DirectorMapper.register - ==> Parameters: 봉준호(String), 아카데미상 수상(String)
+2022-30-25 11:30:21 DEBUG o.k.m.m.m.DirectorMapper.register - <==    Updates: 1
+2022-38-25 11:38:28 DEBUG o.k.m.m.m.DirectorMapper.register - ==>  Preparing: INSERT INTO director(director_id, director_name, intro) VALUES(director_seq.nextval, ?, ?)
+2022-38-25 11:38:28 DEBUG o.k.m.m.m.DirectorMapper.register - ==> Parameters: 고레에다(String), 황금종려상 수상(String)
+2022-38-25 11:38:28 DEBUG o.k.m.m.m.DirectorMapper.register - <==    Updates: 1
+2022-43-25 11:43:16 DEBUG o.k.m.m.m.DirectorMapper.register - ==>  Preparing: INSERT INTO director(director_id, director_name, intro) VALUES(director_seq.nextval, ?, ?)
+2022-43-25 11:43:16 DEBUG o.k.m.m.m.DirectorMapper.register - ==> Parameters: 고레에다(String), 황금종려상 수상(String)
+2022-43-25 11:43:16 DEBUG o.k.m.m.m.DirectorMapper.register - <==    Updates: 1
+2022-44-25 11:44:49 DEBUG o.k.m.m.m.D.findAllDirectorList - ==>  Preparing: select director_id, director_name, intro from director order by director_id desc
+2022-44-25 11:44:49 DEBUG o.k.m.m.m.D.findAllDirectorList - ==> Parameters: 
+2022-44-25 11:44:49 DEBUG o.k.m.m.m.D.findAllDirectorList - <==      Total: 2
+2022-47-25 11:47:47 DEBUG o.k.m.m.m.D.findAllDirectorList - ==>  Preparing: select director_id, director_name, intro from director order by director_id desc
+2022-47-25 11:47:47 DEBUG o.k.m.m.m.D.findAllDirectorList - ==> Parameters: 
+2022-47-25 11:47:47 DEBUG o.k.m.m.m.D.findAllDirectorList - <==      Total: 2
+2022-19-25 12:19:05 DEBUG o.k.m.m.mapper.MovieMapper.register - ==>  Preparing: insert into movie(movie_id, title, genre, attendance, director_id) values(movie_seq.nextval, ?, ?, ?, ?)
+2022-19-25 12:19:49 DEBUG o.k.m.m.mapper.MovieMapper.register - ==>  Preparing: insert into movie(movie_id, title, genre, attendance, director_id) values(movie_seq.nextval, ?, ?, ?, ?)
+2022-19-25 12:19:49 DEBUG o.k.m.m.mapper.MovieMapper.register - ==> Parameters: 기생충(String), 코미디(String), 2000(Integer), 0(Integer)
+2022-21-25 12:21:06 DEBUG o.k.m.m.mapper.MovieMapper.register - ==>  Preparing: insert into movie(movie_id, title, genre, attendance, director_id) values(movie_seq.nextval, ?, ?, ?, ?)
+2022-21-25 12:21:07 DEBUG o.k.m.m.mapper.MovieMapper.register - ==> Parameters: 기생충(String), 코미디(String), 2000(Integer), 1(Integer)
+2022-21-25 12:21:07 DEBUG o.k.m.m.mapper.MovieMapper.register - <==    Updates: 1
+2022-23-25 12:23:40 DEBUG o.k.m.m.mapper.MovieMapper.register - ==>  Preparing: insert into movie(movie_id, title, genre, attendance, director_id) values(movie_seq.nextval, ?, ?, ?, ?)
+2022-23-25 12:23:40 DEBUG o.k.m.m.mapper.MovieMapper.register - ==> Parameters: 설국열차(String), SF(String), 2000(Integer), 1(Integer)
+2022-23-25 12:23:40 DEBUG o.k.m.m.mapper.MovieMapper.register - <==    Updates: 1
+2022-40-25 12:40:23 DEBUG o.k.m.m.m.M.findAllMovieList - ==>  Preparing: select m.title, d.director_name from movie m inner join director d on d.director_id = m.director_id
+2022-40-25 12:40:23 DEBUG o.k.m.m.m.M.findAllMovieList - ==> Parameters: 
+2022-45-25 12:45:26 DEBUG o.k.m.m.m.M.findAllMovieList - ==>  Preparing: select m.title, d.director_name from movie m inner join director d on d.director_id = m.director_id
+2022-45-25 12:45:26 DEBUG o.k.m.m.m.M.findAllMovieList - ==> Parameters: 
+2022-45-25 12:45:26 DEBUG o.k.m.m.m.M.findAllMovieList - <==      Total: 2
+2022-22-25 14:22:12 DEBUG o.k.m.m.m.MovieMapper.findMovieById - ==>  Preparing: select m.movie_id, m.title, m.genre, m.attendance, d.director_id, d.director_name, d.intro from movie m inner join director d on d.director_id = m.director_id and m.movie_id = ?
+2022-22-25 14:22:12 DEBUG o.k.m.m.m.MovieMapper.findMovieById - ==> Parameters: 1(Integer)
+2022-22-25 14:22:35 DEBUG o.k.m.m.m.MovieMapper.findMovieById - ==>  Preparing: select m.movie_id, m.title, m.genre, m.attendance, d.director_id, d.director_name, d.intro from movie m inner join director d on d.director_id = m.director_id and m.movie_id = ?
+2022-22-25 14:22:35 DEBUG o.k.m.m.m.MovieMapper.findMovieById - ==> Parameters: 1(Integer)
+2022-22-25 14:22:35 DEBUG o.k.m.m.m.MovieMapper.findMovieById - <==      Total: 0

@@ -1,0 +1,14 @@
+**DB Modeling**
+
+-ERD : Entity Relationship dragram, DB설계를 위한 다이어그램
+-정규화 : DB설계시 중복을 최소화하기 위해 데이터를 구조화하는 과정
+
+ㅁ 모델링
+	ㅁ 영화정보 사이트에서 제공하는 영화정보
+	* 영화아이디, 영화제목, 감독아이디, 장르, 관객수, 감독이름, 감독주소, 감독소개
+		ㄴ 일반 속성 내 이행속성들이 존재한다, 3정규화.
+		
+	ㅁ VO modeling(Class diagram)
+	* MovieVO has a DirectVO(has a, aggregation relationship)
+	
+	
