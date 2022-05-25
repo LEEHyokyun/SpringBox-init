@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>jquery-on</title>
+<script type="text/javascript">
+	$(function(){
+		//createBtn 클릭시 div영역(testDiv)에 버튼 동적으로 생성
+		$("#createBtn").click(function(){
+			let btn = "<input type='button' value='버튼' class='testBtn'><br>";
+			$("#testDiv").append(btn);
+		});
+		
+		//testBtn은 이후 후속 이벤트로 생성된 동적 요소이며, DOM load시점에서는 존재하지 않는다.
+		//따라서 아래의 이벤트는 동작하지 않는다(적용불가).
+		/* $(".testBtn").click(function(){
+			alert($(this).val())
+		}); */
+		
+		//jquery on, dom load 이후 동적 요소에 대한 이벤트 적용
+		//$(셀렉터-동적으로 생성되는 요소의 부모요소!).on~~
+		$("#testDiv").on("click", ".testBtn", function() {
+			alert($(this).val());
+		});
+	});
+</script>
+</head>
+<body>
+<div class="container">
+<!-- 아래 버튼을 누르면 testDiv 영역에 동적으로 버튼을 생성한다 -->
+<input type="button" value="버튼생성" id="createBtn">
+<hr>
+<div id="testDiv"></div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+

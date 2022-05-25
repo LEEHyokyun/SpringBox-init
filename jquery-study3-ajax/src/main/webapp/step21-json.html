@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>json</title>
+<script type="text/javascript">
+	$(function(){
+		$("#jsonBtn").click(function(){
+			let person = {
+					//json object
+					name: "아이유",
+					address: "종로",
+					age: 30
+			};
+			alert(person.name);
+		});
+		
+		$("#jsonArrayBtn").click(function(){
+			let skill=["ioc", "di", "aop"];
+			//json array
+			for(let i=0;i<skill.length;i++){
+				alert(skill[i]);
+			}
+		});
+	});
+</script>
+</head>
+<body>
+<div class="container">
+	<input type="button" value="testJSON" id="jsonBtn">
+	<input type="button" value="testJSONArray" id="jsonArrayBtn">
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
