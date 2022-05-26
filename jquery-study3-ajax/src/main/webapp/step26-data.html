@@ -6,7 +6,23 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>jquery form 요소 제어</title>
+<title>jquery data 이용</title>
+<script type="text/javascript">
+	$(function(){
+		//getter
+		$("#testBtn1").click(function(){
+			alert($("#member").data("id"));
+		});
+		//할당1
+		$("#testBtn2").click(function(){
+			$("#member").data("id", "springking").data("age",15);
+		});
+		//할당2
+		$("#testBtn3").click(function(){
+			$("#customer").data("id", "jqeuryking").data("detailInfo", {age:11, name:"손흥민"});
+		});
+	});
+</script>
 </head>
 <body>
 <div class="container">
