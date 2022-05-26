@@ -248,4 +248,51 @@
 	* window load(javascript), jquery ready의 차이?
 			- window load는 이미지, 동영상 등 모든 자원이 적재된 후 실행
 			- jquery는 DOM이 load되는 시점에서 실행 
-			
+			- jquery on을 통해 동적 생성 요소에 대해 이벤트 바인딩 가능
+	
+ㅁ Spring MVC
+	ㅁ 기본 
+	* Spring framework기반 java web application 구현을 위한 기술이다.
+	* 디자인패턴은 MVC Design Pattern, Front Controller Design Pattern이 융합되어있다.
+		ㅁ MVC
+		* Model, View, Controller 영역으로 분리하여 응집도 높은 개발을 구성한다.
+			ㄴ Model : business logic, data access logic
+			ㄴ view : 클라이언트에게 response
+			ㄴ controller : 클라이언트 요청 분석, model과 연동, 적절한 view 응답
+		* controller, view - Presentation layer, model - persistance layer
+		ㅁ Front
+		* 모든 클라이언트의 요청을 하나의 진입점인 FrontControllerServlet을 통해 일괄처리를 하는 pattern
+		* 모든 공통 정책을 일관되게 수용 및 처리하여, 효율적인 로직 처리가 가능하다.
+	
+	ㅁ 설정
+		ㅁ springmvc - web.xml(deployment descriptor, DD), 웹 설정정보
+			ㄴ 최초 web.xml 설정에 따라 home.do로 요청되고, controller의 modelandview 응답 및 구성에 따라 index.jsp를 통해 응답
+			ㄴ Dispatcher servelt은 client의 요청이 반드시 거치는 진입점으로, 담당 controller로 보내고 해당 설정에 따라 view로 최종 응답
+			ㄴ Dispatcher servlet이 일괄적으로 container 설정 및 DI, DL 등 의존객체를 가져오고 객체(구현쳬)를 생성한다.
+				ㄴ spring container인 webapplicationcontext 생성
+		ㅁ springcontainer - dispatcherServlet.xml
+			ㄴ application 최초 실행 후 web.xml -> dispatcherServlet.xml을 거쳐 내부적으로 구성된 welcome file로 home.do url요청 발생
+			ㄴ 그 후 내부적으로 생성된 index.jsp 실행
+			ㄴ 세부 로직의 경우, HandlerMapping을 통해 controller 로직 수행, 그 후 model 등을 거쳐 ModelandView 정책에 따라 view로 응답.
+		※ 중요) DispatcherServlet : FrontController, Spring 설정 등을 고려하여 webapplicationContext 생성.
+		※ 중요) HandlerMapping : RequestMappingHandlerMapping이 실행되어 컨트롤러 연결 
+		※ 중요) HandlerAdaptor : HandlerMapping에서 연결된 컨트롤러를 실행시키는 역할, RequestMappingHandlerAdaptor가 메서드가 필요한 매개변수 인자값 제공 
+		ㅁ ModelAndView - 컨트롤러 실행후 DispatcherServlet에게 반환하는 정보
+			ㄴ Model과 연동한 결과 정보(in controller)와 View 정보를 할당하여 반환한다.
+			ㄴ view name, request.setAttribute name/model!
+		ㅁ ViewResolver - 컨트롤러가 반환한 ModelAndView 정보를 이용해 클라이언트에게 응답할 view 정책/방식을 제공하는 역할, 담당자
+			ㄴ InternalResourceViewResolver 설정(dispatcher.xml)을 통해 해당 정책이 설정됨
+		ㅁ 개발자는 controller, view를 직접 작성해야 하며, 위 요소들은 springMVC에서 제공.
+		
+	ㅁ COntroller 로직 수행 요소
+		ㅁ @Controlelr - bean으로 스프링 컨테이너에 등록, 관리
+		ㅁ @RequestMapping - 요청 url mapping
+		ㅁ @GetMapping - 요청 url mapping / get 요청일때만 동작
+		ㅁ @PostMapping - 요청 url mapping / post 요청일때만 동작
+		ㅁ @ResponseBody -ajax 사용시 응답하는 어노테이션
+		
+	ㅁ 요청별로 다수의 Controller을 생성할 필요가 없다.
+		* Controller component를 생성하고, 내부적으로 "요청"이 아닌, "기능별" 어노테이션(method component)을 등록한다.
+		* 이 등록한 기능들에 따라 spring container에서 DI되어 사용된다(여러 controller을 번거롭게 만들 필요가 없어짐)
+		* 업무별로 bean을 등록(~.do)하고 잘 mapping만 시켜주면 되므로, 기존 legacy에 비해서는 구조적으로는 조금 경량화해짐
+			ㄴ class diagram에서 classX .. 기능적으로 bean 구성만 잘 하면 됨 
