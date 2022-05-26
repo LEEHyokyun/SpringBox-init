@@ -17,6 +17,8 @@ ${message }<br>
 <br>
 <a href="paramTest1.do?customerId=javaking&money=200">controller-test3</a>
 <br>
+<a href="AjaxTest.do">ajax test</a>
+<br>
 <form action="paramTest2.do" method="post">
 	회원명 <input type="text" name="memberName"><br>
 	주소 <input type="text" name="memberAddress"><br>
