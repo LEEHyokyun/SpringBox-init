@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>springstudy20-springmvc-mybatis-junit</display-name>
+  <welcome-file-list>
+    <welcome-file>home.do</welcome-file>
+  </welcome-file-list>
+  <!-- 
+  	모든 클라이언트 요청의 진입점인 FrontControllerServlet역할을 하는 DispatcherServlet.
+  	자신의 spring 설정파일을 [servlet-name]-servelt.xml로 찾아서 로드한다.
+  	아래의 경우 dispatcher-servlet.xml을 찾아서 로드(xml 방식)
+   -->
+    <!-- 
+ 	서블릿 life cycle 상에서 첫 클라이언트 요청시 Servlet 객체생성후 init() 실행,
+ 	load on startup 설정시, application 시작시점에서 Servlet 객체생성 및 init()까지 미리 실행한다.
+  	-->
+  <servlet>
+  	<servlet-name>dispatcher</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+ <!-- 
+ 	.do로 마치는 클라이언트의 요청을 Dispatcher servlet이 처리하도록 url pattern 지정
+  -->
+  <servlet-mapping>
+  	<servlet-name>dispatcher</servlet-name>
+  	<url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <filter>
+	<filter-name>EncodingFilter</filter-name>
+	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+	<init-param>
+	<param-name>encoding</param-name>
+	<param-value>utf-8</param-value>
+	</init-param>
+	</filter>
+	<filter-mapping>
+	<filter-name>EncodingFilter</filter-name>
+	<url-pattern>/*</url-pattern>
+	</filter-mapping>
+</web-app>

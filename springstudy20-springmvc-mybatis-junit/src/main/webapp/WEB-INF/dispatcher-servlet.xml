@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+<!-- Annotation 기반 spring IOC DI 설정 : @RequestMapping, @GetMapping @PostMapping 등 지원 -->
+<context:component-scan base-package="org.kosta/" />
+<!-- SpringMVC 설정 -->
+<mvc:annotation-driven />
+<!-- ViewResolver : client에게 응답하는 방식 
+	-WEB-INF의 다른 파일에 대해 client 응답시 특정 view파일 외 접근 및 수정하는 것을 방지한다.
+	아래의 설정대로, views 경로대로 응답하도록 설정가능하며
+	.jsp 파일에 대해서만 최종적인 view를 구현할 수 있도록(사용자에 대해 응답할 수 있도록) 설정할 수 있다.
+	= ViewResolver
+	ex) controller -> ok.jsp -> WEB-INF/views/ok.jsp
+	
+	WEB아래 배치시 클라이언트가 직접 접근 불가, DispatcherServlet을 통해 서비스 받도록 유도 가능
+	-> client의 직접 접근이 아닌, FrontController을 통해서만 (일괄처리) 로직처리가 가능하도록 설정
+	-> 공통정책 수행의 효율성 증가, MVC pattern 준수
+	
+	dispatcherServlet 로드시 springcontainer인 webapplicationContext를 생성하고, 이후 세부 설정파일인 dispatcher-servlet.xml 로드
+	view를 처리하기 위한 정책이나 의존객체 생성을 위한 base package 등을 생성한다.
+-->
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<property name="prefix" value="/WEB-INF/views/" />
+	<property name="suffix" value=".jsp" />
+</bean>
+<!-- mybatis 설정 -->
+<bean id="dbcp" class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="driverClassName"
+			value="oracle.jdbc.OracleDriver" />
+		<property name="url"
+			value="jdbc:oracle:thin:@127.0.0.1:1521:xe" />
+		<property name="username" value="scott" />
+		<property name="password" value="tiger" />
+	</bean>
+	<bean id="sqlSessionFactory"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dbcp" />
+		<!-- <property name="mapperLocations" value="classpath:/mappers/*Mapper.xml"/> -->
+		<property name="typeAliasesPackage"
+			value="org.kosta.myproject.vo" />
+			<!-- table - 인스턴스변수 자동 매핑 -->
+		<property name="configuration">
+			<bean class="org.apache.ibatis.session.Configuration">
+				<property name="mapUnderscoreToCamelCase" value="true" />
+			</bean>
+		</property>
+	</bean>
+	<!-- 반복적인 dbcp 연동작업을 ※ openSession() -> commit() -> close() template에서 지원 
+		및 AOP 기반 트랜잭션 처리를 지원, DAO에서 DI 형식으로 주입 -->
+	<bean id="sqlSessionTemplate"
+		class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactory" />
+	</bean>
+	<context:component-scan
+		base-package="org.kosta.myproject" />
+	<!--  mybatis proxy 설정 -->
+	<mybatis-spring:scan base-package="org.kosta.myproject.mapper"/>
+</beans>

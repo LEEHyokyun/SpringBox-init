@@ -1,0 +1,104 @@
+2022-10-27 12:10:08 DEBUG o.k.m.m.C.getTotalCustomerCount - ==>  Preparing: select count(*) from spring_customer
+2022-10-27 12:10:08 DEBUG o.k.m.m.C.getTotalCustomerCount - ==> Parameters: 
+2022-10-27 12:10:08 DEBUG o.k.m.m.C.getTotalCustomerCount - <==      Total: 1
+2022-10-27 12:10:32 DEBUG o.k.m.m.C.getTotalCustomerCount - ==>  Preparing: select count(*) from spring_customer
+2022-10-27 12:10:32 DEBUG o.k.m.m.C.getTotalCustomerCount - ==> Parameters: 
+2022-10-27 12:10:33 DEBUG o.k.m.m.C.getTotalCustomerCount - <==      Total: 1
+2022-10-27 12:10:37 DEBUG o.k.m.m.C.getTotalCustomerCount - ==>  Preparing: select count(*) from spring_customer
+2022-10-27 12:10:37 DEBUG o.k.m.m.C.getTotalCustomerCount - ==> Parameters: 
+2022-10-27 12:10:38 DEBUG o.k.m.m.C.getTotalCustomerCount - <==      Total: 1
+2022-15-27 12:15:44 DEBUG o.k.m.m.C.findCustomerById - ==>  Preparing: select id, name, address from spring_customer where id=?
+2022-15-27 12:15:44 DEBUG o.k.m.m.C.findCustomerById - ==> Parameters: java(String)
+2022-15-27 12:15:45 DEBUG o.k.m.m.C.findCustomerById - <==      Total: 1
+2022-22-27 14:22:13 DEBUG o.k.m.m.C.findCustomerById - ==>  Preparing: select id, name, address from spring_customer where id=?
+2022-22-27 14:22:13 DEBUG o.k.m.m.C.findCustomerById - ==> Parameters: javaqueen(String)
+2022-22-27 14:22:14 DEBUG o.k.m.m.C.findCustomerById - <==      Total: 0
+2022-22-27 14:22:14 DEBUG o.k.m.m.C.registerCustomer - ==>  Preparing: insert into spring_customer(id, name, address) values(javaqueen, 영희, 용인)
+2022-22-27 14:22:14 DEBUG o.k.m.m.C.registerCustomer - ==> Parameters: 
+2022-22-27 14:22:14 DEBUG o.k.m.m.C.findCustomerById - ==>  Preparing: select id, name, address from spring_customer where id=?
+2022-22-27 14:22:14 DEBUG o.k.m.m.C.findCustomerById - ==> Parameters: java(String)
+2022-22-27 14:22:14 DEBUG o.k.m.m.C.findCustomerById - <==      Total: 1
+2022-22-27 14:22:14 DEBUG o.k.m.m.C.getTotalCustomerCount - ==>  Preparing: select count(*) from spring_customer
+2022-22-27 14:22:14 DEBUG o.k.m.m.C.getTotalCustomerCount - ==> Parameters: 
+2022-22-27 14:22:14 DEBUG o.k.m.m.C.getTotalCustomerCount - <==      Total: 1
+2022-24-27 14:24:04 DEBUG o.k.m.m.C.findCustomerById - ==>  Preparing: select id, name, address from spring_customer where id=?
+2022-24-27 14:24:04 DEBUG o.k.m.m.C.findCustomerById - ==> Parameters: javaqueen(String)
+2022-24-27 14:24:04 DEBUG o.k.m.m.C.findCustomerById - <==      Total: 0
+2022-24-27 14:24:04 DEBUG o.k.m.m.C.registerCustomer - ==>  Preparing: insert into spring_customer(id, name, address) values(?, ?, ?)
+2022-24-27 14:24:04 DEBUG o.k.m.m.C.registerCustomer - ==> Parameters: javaqueen(String), 영희(String), 용인(String)
+2022-24-27 14:24:04 DEBUG o.k.m.m.C.registerCustomer - <==    Updates: 1
+2022-24-27 14:24:04 DEBUG o.k.m.m.C.findCustomerById - ==>  Preparing: select id, name, address from spring_customer where id=?
+2022-24-27 14:24:04 DEBUG o.k.m.m.C.findCustomerById - ==> Parameters: java(String)
+2022-24-27 14:24:04 DEBUG o.k.m.m.C.findCustomerById - <==      Total: 1
+2022-24-27 14:24:04 DEBUG o.k.m.m.C.getTotalCustomerCount - ==>  Preparing: select count(*) from spring_customer
+2022-24-27 14:24:04 DEBUG o.k.m.m.C.getTotalCustomerCount - ==> Parameters: 
+2022-24-27 14:24:04 DEBUG o.k.m.m.C.getTotalCustomerCount - <==      Total: 1
+2022-27-27 15:27:00 DEBUG o.k.m.m.C.findAddressList - ==>  Preparing: select distinct address from spring_customer
+2022-27-27 15:27:00 DEBUG o.k.m.m.C.findAddressList - ==> Parameters: 
+2022-27-27 15:27:00 DEBUG o.k.m.m.C.findAddressList - <==      Total: 5
+2022-27-27 15:27:00 DEBUG o.k.m.m.C.findCustomerById - ==>  Preparing: select id, name, address from spring_customer where id=?
+2022-27-27 15:27:00 DEBUG o.k.m.m.C.findCustomerById - ==> Parameters: javaqueen(String)
+2022-27-27 15:27:00 DEBUG o.k.m.m.C.findCustomerById - <==      Total: 1
+2022-27-27 15:27:00 DEBUG o.k.m.m.C.findCustomerById - ==>  Preparing: select id, name, address from spring_customer where id=?
+2022-27-27 15:27:00 DEBUG o.k.m.m.C.findCustomerById - ==> Parameters: java(String)
+2022-27-27 15:27:00 DEBUG o.k.m.m.C.findCustomerById - <==      Total: 1
+2022-46-27 16:46:21 DEBUG o.k.m.m.C.findAddressList - ==>  Preparing: select id, name from spring_customer where address = ?
+2022-46-27 16:46:21 DEBUG o.k.m.m.C.findAddressList - ==> Parameters: 오리(String)
+2022-46-27 16:46:22 DEBUG o.k.m.m.C.findAddressList - <==      Total: 2
+2022-46-27 16:46:22 DEBUG o.k.m.m.C.findCustomerById - ==>  Preparing: select id, name, address from spring_customer where id=?
+2022-46-27 16:46:22 DEBUG o.k.m.m.C.findCustomerById - ==> Parameters: javaqueen(String)
+2022-46-27 16:46:22 DEBUG o.k.m.m.C.findCustomerById - <==      Total: 1
+2022-46-27 16:46:22 DEBUG o.k.m.m.C.findCustomerById - ==>  Preparing: select id, name, address from spring_customer where id=?
+2022-46-27 16:46:22 DEBUG o.k.m.m.C.findCustomerById - ==> Parameters: java(String)
+2022-46-27 16:46:22 DEBUG o.k.m.m.C.findCustomerById - <==      Total: 1
+2022-53-27 16:53:24 DEBUG o.k.m.m.C.findAddressList - ==>  Preparing: select id, name from spring_customer where address = ?
+2022-53-27 16:53:24 DEBUG o.k.m.m.C.findAddressList - ==> Parameters: 오리(String)
+2022-53-27 16:53:24 DEBUG o.k.m.m.C.findAddressList - <==      Total: 2
+2022-53-27 16:53:24 DEBUG o.k.m.m.C.findCustomerById - ==>  Preparing: select id, name, address from spring_customer where id=?
+2022-53-27 16:53:24 DEBUG o.k.m.m.C.findCustomerById - ==> Parameters: javaqueen(String)
+2022-53-27 16:53:24 DEBUG o.k.m.m.C.findCustomerById - <==      Total: 1
+2022-53-27 16:53:24 DEBUG o.k.m.m.C.findCustomerById - ==>  Preparing: select id, name, address from spring_customer where id=?
+2022-53-27 16:53:24 DEBUG o.k.m.m.C.findCustomerById - ==> Parameters: java(String)
+2022-53-27 16:53:24 DEBUG o.k.m.m.C.findCustomerById - <==      Total: 1
+2022-57-27 16:57:07 DEBUG o.k.m.m.C.findAddressList - ==>  Preparing: select id, name from spring_customer where address = ?
+2022-57-27 16:57:08 DEBUG o.k.m.m.C.findAddressList - ==> Parameters: 오리(String)
+2022-57-27 16:57:08 DEBUG o.k.m.m.C.findAddressList - <==      Total: 2
+2022-57-27 16:57:08 DEBUG o.k.m.m.C.findCustomerById - ==>  Preparing: select id, name, address from spring_customer where id=?
+2022-57-27 16:57:08 DEBUG o.k.m.m.C.findCustomerById - ==> Parameters: javaqueen(String)
+2022-57-27 16:57:08 DEBUG o.k.m.m.C.findCustomerById - <==      Total: 1
+2022-57-27 16:57:08 DEBUG o.k.m.m.C.findCustomerById - ==>  Preparing: select id, name, address from spring_customer where id=?
+2022-57-27 16:57:08 DEBUG o.k.m.m.C.findCustomerById - ==> Parameters: java(String)
+2022-57-27 16:57:08 DEBUG o.k.m.m.C.findCustomerById - <==      Total: 1
+2022-13-27 17:13:29 DEBUG o.k.m.m.C.findAddressList - ==>  Preparing: select id, name from spring_customer where address = ?
+2022-13-27 17:13:30 DEBUG o.k.m.m.C.findAddressList - ==> Parameters: 오리(String)
+2022-13-27 17:13:30 DEBUG o.k.m.m.C.findAddressList - <==      Total: 2
+2022-13-27 17:13:30 DEBUG o.k.m.m.C.findCustomerById - ==>  Preparing: select id, name, address from spring_customer where id=?
+2022-13-27 17:13:30 DEBUG o.k.m.m.C.findCustomerById - ==> Parameters: javaqueen(String)
+2022-13-27 17:13:30 DEBUG o.k.m.m.C.findCustomerById - <==      Total: 1
+2022-13-27 17:13:30 DEBUG o.k.m.m.C.findCustomerById - ==>  Preparing: select id, name, address from spring_customer where id=?
+2022-13-27 17:13:30 DEBUG o.k.m.m.C.findCustomerById - ==> Parameters: java(String)
+2022-13-27 17:13:30 DEBUG o.k.m.m.C.findCustomerById - <==      Total: 1
+2022-14-27 18:14:51 DEBUG o.k.m.m.C.checkDuplicateId - ==>  Preparing: select count(*) from spring_customer where id=?
+2022-14-27 18:14:51 DEBUG o.k.m.m.C.checkDuplicateId - ==> Parameters: java(String)
+2022-14-27 18:14:51 DEBUG o.k.m.m.C.checkDuplicateId - <==      Total: 1
+2022-14-27 18:14:51 DEBUG o.k.m.m.C.findAddressList - ==>  Preparing: select id, name from spring_customer where address = ?
+2022-14-27 18:14:51 DEBUG o.k.m.m.C.findAddressList - ==> Parameters: 오리(String)
+2022-14-27 18:14:51 DEBUG o.k.m.m.C.findAddressList - <==      Total: 2
+2022-14-27 18:14:51 DEBUG o.k.m.m.C.findCustomerById - ==>  Preparing: select id, name, address from spring_customer where id=?
+2022-14-27 18:14:51 DEBUG o.k.m.m.C.findCustomerById - ==> Parameters: javaqueen(String)
+2022-14-27 18:14:51 DEBUG o.k.m.m.C.findCustomerById - <==      Total: 1
+2022-14-27 18:14:51 DEBUG o.k.m.m.C.findCustomerById - ==>  Preparing: select id, name, address from spring_customer where id=?
+2022-14-27 18:14:51 DEBUG o.k.m.m.C.findCustomerById - ==> Parameters: java(String)
+2022-14-27 18:14:51 DEBUG o.k.m.m.C.findCustomerById - <==      Total: 1
+2022-42-27 20:42:58 DEBUG o.k.m.m.C.checkDuplicateId - ==>  Preparing: select count(*) from spring_customer where id=?
+2022-42-27 20:42:58 DEBUG o.k.m.m.C.checkDuplicateId - ==> Parameters: javahi(String)
+2022-42-27 20:42:58 DEBUG o.k.m.m.C.checkDuplicateId - <==      Total: 1
+2022-42-27 20:42:58 DEBUG o.k.m.m.C.findAddressList - ==>  Preparing: select id, name from spring_customer where address = ?
+2022-42-27 20:42:58 DEBUG o.k.m.m.C.findAddressList - ==> Parameters: 오리(String)
+2022-42-27 20:42:58 DEBUG o.k.m.m.C.findAddressList - <==      Total: 2
+2022-42-27 20:42:58 DEBUG o.k.m.m.C.findCustomerById - ==>  Preparing: select id, name, address from spring_customer where id=?
+2022-42-27 20:42:58 DEBUG o.k.m.m.C.findCustomerById - ==> Parameters: javaqueen(String)
+2022-42-27 20:42:58 DEBUG o.k.m.m.C.findCustomerById - <==      Total: 1
+2022-42-27 20:42:58 DEBUG o.k.m.m.C.findCustomerById - ==>  Preparing: select id, name, address from spring_customer where id=?
+2022-42-27 20:42:58 DEBUG o.k.m.m.C.findCustomerById - ==> Parameters: java(String)
+2022-42-27 20:42:58 DEBUG o.k.m.m.C.findCustomerById - <==      Total: 1

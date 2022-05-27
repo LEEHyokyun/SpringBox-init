@@ -13,12 +13,14 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\hyokyun\Desktop\springstudy20-springmvc-mybatis-junit-inst"/>
 			<item value="C:\Users\hyokyun\Desktop\jquery-study3-ajax"/>
 			<item value="C:\Users\hyokyun\Desktop\jquery-study2"/>
 			<item value="C:\kosta238\web-workspace\web-workspace2\00-db-sql"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
+			<item value="C:\kosta238\spring-worksapce1\springstudy20-springmvc-mybatis-junit\src\main\webapp\WEB-INF\views\register-form-ajax.jsp"/>
 		</list>
 	</section>
 </section>

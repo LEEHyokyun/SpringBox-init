@@ -1,8 +1,11 @@
 package org.kosta.myproject.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import org.kosta.myproject.model.CarVO;
 import org.kosta.myproject.model.CustomerVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -47,6 +50,26 @@ public class MyTest2AjaxController {
 		List<String> list = new ArrayList<String>();
 		list.add("방화수류정");
 		list.add("융건륭");
+		return list;
+	}
+	
+	@RequestMapping("testAjax4")
+	@ResponseBody
+	public Map<String, String> testAjax4(String carNo){
+		System.out.println(carNo+"의 차량정보를 db에서 조회하였습니다.");
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("carModel", "소나타");
+		map.put("color", "검정");
+		return map;
+	}
+	
+	@RequestMapping("testAjax5")
+	@ResponseBody
+	public List<CarVO> testAjax5(String maker) {
+		System.out.println(maker+"의 차량정보를 db에서 조회하였습니다.");
+		List<CarVO> list = new ArrayList<CarVO>();
+		list.add(new CarVO("소나타", 2000));
+		list.add(new CarVO("아반떼", 1500));
 		return list;
 	}
 }

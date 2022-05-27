@@ -45,7 +45,35 @@
 				}
 			});
 		});
+		$("#ajaxBtn4").click(function(){
+			//ajax, json data 전달
+			$.ajax({
+				type: "get",
+				url: "testAjax4.do",
+				data: "carNo=22수0771",
+				success: function(jsonObj){ //by jsonobject
+						alert(jsonObj.carModel);
+					}
+			});
+		});
+		$("#ajaxBtn5").click(function(){
+			//ajax, json data 전달
+			$.ajax({
+				type: "get",
+				url: "testAjax5.do",
+				data: "maker=현대",
+				success: function(jsonArr){ //by jsonobject
+						for(let i=0;i<jsonArr.length;i++){
+							alert(jsonArr[i].model);
+						}
+					}
+			});
+		});
 	});
+	/*
+	* jsonObj -> reflection 방식으로 내부 변수 조회(Obj.name)
+	* jsonArray -> 배열을 순환하면서 내부적인 정보 조회(for(let i..))
+	*/
 </script>
 </head>
 <body>
@@ -53,6 +81,8 @@
 <input type="button" id="ajaxBtn1" value="testAjax1"><br><br>
 <input type="button" id="ajaxBtn2" value="testAjax2"><br><br>
 <input type="button" id="ajaxBtn3" value="testAjax3"><br><br>
+<input type="button" id="ajaxBtn4" value="testAjax4"><br><br>
+<input type="button" id="ajaxBtn5" value="testAjax5"><br><br>
 <span id="resultView"></span>
 </div>
 </body>
