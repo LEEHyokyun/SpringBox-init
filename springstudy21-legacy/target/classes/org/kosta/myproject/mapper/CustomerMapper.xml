@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kosta.myproject.mapper.CustomerMapper">
+	<select id="getTotalCustomerCount" resultType="int">
+		select count(*) from spring_customer
+	</select>
+	<select id="findCustomerById" parameterType="string" resultType="CustomerVO">
+		select id, name, address from spring_customer
+		where id=#{id}
+	</select>
+	<insert id="registerCustomer" parameterType="CustomerVO">
+		insert into spring_customer(id, name, address)
+		values(#{id}, #{name}, #{address})
+	</insert>
+	<select id="findAddressList" parameterType="string" resultType="CustomerVO">
+		select id, name from spring_customer
+		where address = #{address}
+	</select>
+	<select id="getTotalAddressList" resultType="String">
+		select distinct address from spring_customer
+	</select>
+	<select id="checkDuplicateId" parameterType="string" resultType="int">
+		select count(*) from spring_customer where id=#{id}
+	</select>
+</mapper>
