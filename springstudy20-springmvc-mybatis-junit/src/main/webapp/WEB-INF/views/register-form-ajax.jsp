@@ -20,10 +20,12 @@
 		let idCheckView = $("#idCheckView"); //얘도 마찬가지
 		
 		$("#memberId").keyup(function(){
-			let id = $(this).val();
+			let id = $(this).val(); 
+			//let id = $(this).val().trim(); //여백제거
 			
 			if(id.length < 4){
 				idCheckView.html('<font color="red"> 아이디는 4자 이상 입력하셔야 합니다.</font>');
+				//idCheckView.html("아이디는 4자 이상이어야 합니다.").css("background", "red");
 				idCheckView.val("fail");
 			}else{
 				//idCheckView.html('');
@@ -54,6 +56,22 @@
 				return false;
 			}
 		}); //button click
+		/*
+		* another solution
+		*/
+		//submit 시 일괄처리
+		/* $("#registerForm").submit(function(){
+			if(checkIdResult == ""){
+				alert("아이디를 입력하세요");
+				return false;
+			}else if(checkIdResult == "fail"){
+				alert("아이디 중복확인을 진행하세요");
+				return false;
+			}else{
+				return true;
+			}
+				
+		}); */
 	});
 </script>
 </head>

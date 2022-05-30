@@ -76,6 +76,10 @@ public class CustomerController {
 			checkIdResult = "ok";
 		
 		return checkIdResult;
+		/*
+		 * 삼항 연산자
+		 * return (result==0) ? "ok":"fail";
+		 */
 	}
 	
 	@PostMapping("registerCustomerByAjax.do")
