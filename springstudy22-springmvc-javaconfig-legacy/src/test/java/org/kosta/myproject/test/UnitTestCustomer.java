@@ -5,6 +5,7 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.kosta.myproject.config.RootContextConfig;
 import org.kosta.myproject.mapper.CustomerMapper;
 import org.kosta.myproject.vo.CustomerVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * unit test를 위한 java 프레임 워크
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
+@ContextConfiguration(classes = RootContextConfig.class)
 public class UnitTestCustomer {
 	@Autowired //필드로 주입
 	private CustomerMapper customerMapper;
