@@ -23,7 +23,7 @@ public class CustomerController {
 		this.customerMapper = customerMapper;
 	}
 	
-	@RequestMapping("findCustomerById.do")
+	@RequestMapping("findCustomerById")
 	public String findCustomerById(String id, Model model) {
 		CustomerVO cvo = customerMapper.findCustomerById(id);
 		model.addAttribute("customerVO",cvo);
@@ -34,23 +34,23 @@ public class CustomerController {
 			return "findbyid-fail";
 	}
 	
-	@PostMapping("registerCustomer.do")
+	@PostMapping("registerCustomer")
 	public String registerCustomer(CustomerVO cvo) {
 		CustomerVO cvoResult = customerMapper.findCustomerById(cvo.getId());
 		
 		if(cvoResult == null) {
 			customerMapper.registerCustomer(cvo);
-			return "redirect:registerCustomerRedirected.do";
+			return "redirect:registerCustomerRedirected";
 		}else
 			return "duplicate-id";
 	}
 	
-	@RequestMapping("registerCustomerRedirected.do")
+	@RequestMapping("registerCustomerRedirected")
 	public String registerCustomerRedirected() {
 		return "register-result";
 	}
 	
-	@GetMapping("findCustomerListByAddress.do")
+	@GetMapping("findCustomerListByAddress")
 	public String findCustomerListByAddress(String address, Model model) {
 		System.out.println(address);
 		
@@ -61,7 +61,7 @@ public class CustomerController {
 		return "findbyaddress-list";
 	}
 	
-	@RequestMapping("registerForm.do")
+	@RequestMapping("registerForm")
 	public String registerForm() {
 		return "register-form-ajax";
 	}
@@ -82,15 +82,15 @@ public class CustomerController {
 		 */
 	}
 	
-	@PostMapping("registerCustomerByAjax.do")
+	@PostMapping("registerCustomerByAjax")
 	public String registerCustomerByAjax(CustomerVO cvo) {
 		
 		customerMapper.registerCustomer(cvo);
 		
-		return "redirect:registerResult.do";
+		return "redirect:registerResult";
 	}
 	
-	@RequestMapping("registerResult.do")
+	@RequestMapping("registerResult")
 	public String registerResult() {
 		return "register-result";
 	}

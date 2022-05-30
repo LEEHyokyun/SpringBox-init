@@ -7,7 +7,7 @@
 <title>findbyid-fail</title>
 <script type="text/javascript">
 	alert("아이디에 대한 정보가 존재하지 않습니다.");
-	location.href="home.do";
+	location.href="home";
 </script>
 </head>
 <body>

@@ -31,7 +31,7 @@
 				//idCheckView.html('');
 				$.ajax({
 					type: "get",
-					url: "checkDuplicateId.do",
+					url: "checkDuplicateId",
 					data: "id="+id,
 					success: function(result){
 						checkIdResult = result;
@@ -78,7 +78,7 @@
 <body>
 <!-- 고객 정보 등록 by ajax-->
 <!-- ajax로 아이디 중복을 미리 처리 -->
-<form id="registerForm" method="post" action="registerCustomerByAjax.do">
+<form id="registerForm" method="post" action="registerCustomerByAjax">
 	<input type="text" id="memberId" name="id" placeholder="아이디" required="required"><span id="idCheckView"></span><br>
 	<input type="text" name="name" placeholder="이름" required="required"><br>
 	<input type="text" name="address" placeholder="주소" required="required"><br>

@@ -26,7 +26,8 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-
+	
+	<!-- appServlet에 요청하는 url pattern은 .do가 아닌, /. -->
 	<servlet-mapping>
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>

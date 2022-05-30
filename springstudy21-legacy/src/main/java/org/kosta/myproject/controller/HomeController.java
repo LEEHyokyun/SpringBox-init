@@ -20,7 +20,7 @@ public class HomeController {
 		this.customerMapper = customerMapper;
 	}
 	
-	@RequestMapping(value={"/","home.do"})
+	@RequestMapping(value={"/","home"})
 	//최초 로딩시 여러 url 패턴 등록
 	public String home(Model model) {
 		model.addAttribute("totalCustomerCount", customerMapper.getTotalCustomerCount());

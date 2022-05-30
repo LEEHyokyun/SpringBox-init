@@ -7,7 +7,7 @@
 <title>duplicate-id</title>
 <script type="text/javascript">
 	alert("아이디가 중복되어 고객정보를 등록할 수 없습니다.");
-	location.href="home.do";
+	location.href="home";
 </script>
 </head>
 <body>
