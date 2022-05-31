@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>step01-text-expression</title>
+</head>
+<body>
+<a href="/" th:href="@{/}">home</a><br>
+<!--/* 
+	Controller가 공유한 MemberVO 정보 표현
+*/-->
+<span>회원명</span>
+</body>
+</html>

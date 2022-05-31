@@ -1,0 +1,8 @@
+package org.kosta.myproject.controller;
+
+@Controller
+public class HomeController {
+	public String home() {
+		
+	}
+}

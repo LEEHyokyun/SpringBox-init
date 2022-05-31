@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!-- thymelaf 선언부 -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>springboot thymeleaf</title>
+</head>
+<body>
+springboot thymeleaf
+<br><br>
+<span th:text="${message}">WAS를 거치지 않고 바로 실행(open with browser)할 경우 보이는 text</span>
+<br><br>
+<a href="getAllDepartmentCount">부서수 확인</a>
+<br<br>
+<img alt="thymeleaf" src="thymeleaf.png">
+</body>
+</html>

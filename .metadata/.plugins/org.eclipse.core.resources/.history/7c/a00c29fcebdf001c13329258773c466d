@@ -1,0 +1,19 @@
+package org.kosta.myproject;
+
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.kosta.myproject.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class Springbootstudy1MybatisJspApplicationTests {
+	@Autowired
+	private ProductMapper productMapper;
+	
+	@Test
+	void contextLoads() {
+		Assertions.assertNotNull(productMapper);
+	}
+
+}

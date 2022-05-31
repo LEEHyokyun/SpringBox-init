@@ -1,0 +1,10 @@
+package org.kosta.myproject.vo;
+
+public class MemberVO {
+	private String id;
+	private String password;
+	private String name;
+	private String address;
+	
+	
+}

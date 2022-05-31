@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<!-- thymelaf 선언부 -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>springboot thymeleaf</title>
+</head>
+<body>
+springboot thymeleaf
+<br><br>
+<span th:text="${message}"></span>
+<br><br>
+<img alt="thymeleaf" src="thymeleaf.png">
+</body>
+</html>

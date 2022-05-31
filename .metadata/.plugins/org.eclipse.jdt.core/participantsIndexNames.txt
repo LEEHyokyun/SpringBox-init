@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\kosta238\spring-worksapce2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2602737353.index
+\springbootstudy1-mybatis-jsp\src\main\java
+C:\kosta238\spring-worksapce2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1377207748.index
+\springbootstudy2-mybatis-jsp\src\main\java

@@ -1,0 +1,14 @@
+package org.kosta.myproject.controller;
+
+import org.kosta.myproject.vo.ProductVO;
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class ProductController {
+	public String findProductByNo(int productNo) {
+		
+		
+		
+	}
+	
+}

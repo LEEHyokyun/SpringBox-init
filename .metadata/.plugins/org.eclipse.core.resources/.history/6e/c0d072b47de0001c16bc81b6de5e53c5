@@ -1,0 +1,10 @@
+ㅁ Spring legacy(mvc) vs Spring Boot
+	ㅁ 직접 설정
+		* component scan -> IOC, DI(DL)
+		* SpringMVC -> DispatcherServlet
+		* EncdoingFilter 설정
+		* mvc anntation driven 설정
+		* dbcp, Mybatis 연동 설정
+		* Test를 위한 junit
+		* Security 설정
+	ㅁ

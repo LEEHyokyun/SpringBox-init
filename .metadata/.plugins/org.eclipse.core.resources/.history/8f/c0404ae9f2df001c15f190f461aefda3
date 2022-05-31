@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>home.jsp</title>
+</head>
+<body>
+Hello SpringBoot! + MyBatis + ${message }
+<br><br>
+현재 고객 수는 ${totalProductCount }입니다.
+<br><br>
+<form action="findProductByNo">
+	<input type="number" name="productNo" placeholder="상품번호">
+</form>
+</body>
+</html>

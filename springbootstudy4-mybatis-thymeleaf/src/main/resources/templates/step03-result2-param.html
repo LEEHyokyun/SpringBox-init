@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>step03-result2-param</title>
+</head>
+<body>
+<a href="/" th:href="@{/}">Home</a><br><br>
+<!--/* request getParameter = param.~~*/-->
+<!--/* param에서 forward하여 넘어오는 정보를 받아올 수 있다.*/-->
+board list orderId: <span th:text="${param.orderId}"></span><br>
+board list maker: <span th:text="${param.maker}"></span><br>
+</body>
+</html>

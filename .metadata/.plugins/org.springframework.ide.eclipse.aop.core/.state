@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="springbootstudy3-mybatis-thymeleaf"/>
+<aop-project name="springbootstudy4-mybatis-thymeleaf"/>
+<aop-project name="springbootstudy1-mybatis-jsp"/>
+<aop-project name="springbootstudy2-mybatis-jsp"/>
+</aop-reference-model>

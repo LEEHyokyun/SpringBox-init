@@ -1,0 +1,6 @@
+package org.kosta.myproject.controller;
+
+@Controller
+public class HomeController {
+
+}
