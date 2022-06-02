@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>step05-if-unless-switch</title>
+</head>
+<body>
+<a href="" th:href="@{/}">Home</a><br>
+<!--/*
+	if, unless(*jstl: c:choose)
+	th:block, th:if의 조건 상 true인 경우 th block 태그 실행
+	th:text 문자열 조합 - '' , ||
+*/-->
+<th:block th:if="${product.price<2000}">
+	<div style="background-color: yellow" th:text="| 상품명: ${product.name} 제조사: ${product.maker} |">상품명 제조사명</div>
+</th:block>
+<th:block th:unless="${product.price<2000}">
+	<div style="background-color: lime" th:text="${product.name}">상품명 제조사명</div>
+</th:block>
+<br><br>
+<th:block th:if="${product.maker=='하이트 진로'}">
+	<div style="background-color: yellow" th:text="${product.name}+''+${product.maker}">상품명 제조사명</div>
+</th:block>
+<th:block th:unless="${product.maker=='하이트 진로'}">
+	<div style="background-color: lime" th:text="${product.name}">상품명 제조사명</div>
+</th:block>
+<br><br>
+<!--문자열 조합시 || 또는 '' 로 조합하여 출력 가능, 조합하고자 하는 구간에만 적용할 수도 있다.-->
+<span th:if="${product.price}<2000" th:text="${product.name}">저렴하다.</span>
+<br><br>
+<!--/* 삼항연산자 */-->
+<span th:text="${product.price}<1500? ${product.name} : ${product.maker}"></span><br> <!-- 비교 -->
+<span th:text="${product.gift}? ${product.name} : ${product.maker}"></span><br> <!-- 속성확인 -->
+<span th:text="${product.gift}? |선물증정가능|: |선물증정불가능|"></span><br> <!-- ||문자열조합 -->
+<br><br>
+<!--/* switch case */-->
+<th:block th:switch="${size}">
+	<th:block th:case="L">
+		<span>대</span>
+	</th:block>
+	<th:block th:case="M">
+		<span>중</span>
+		<th:block th:case="*">
+		<span>default</span>
+	</th:block>
+</th:block>
+<br><br>
+</body>
+</html>

@@ -7,10 +7,14 @@
 </head>
 <body>
 <a href="" th:href="@{/}">Home</a><br>
-<span th:text="${session.member.name}"></span><br>
-<span th:text="${session.member.address}"></span><br>
 <!--/*
 	session 객체 정보
 */-->
+<span th:text="${session.member.name}"></span><br>
+<span th:text="${session.member.address}"></span><br>
+<!--/*
+	href, th:href
+*/-->
+<a href="/study4-test?id=spring&name=아이유" th:href="@{/study4-test(id=${session.member.id},name=${session.member.name})}">review querystring test</a>
 </body>
 </html>

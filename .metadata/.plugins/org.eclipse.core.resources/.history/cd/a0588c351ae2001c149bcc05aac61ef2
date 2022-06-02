@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>step05-if-unless-switch</title>
+</head>
+<body>
+<a href="" th:href="@{/}">Home</a><br>
+<!--/*
+	if, unless(*jstl: c:choose)
+	th:block, th:if의 조건 상 true인 경우 th block 태그 실행
+*/-->
+<th:block th:if="">
+</th:block>
+</body>
+</html>

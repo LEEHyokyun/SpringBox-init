@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Springbootstudy4MybatisThymeleafApplicationTests.getTotalCount" project="springbootstudy4-mybatis-thymeleaf" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="org.kosta.myproject.Springbootstudy4MybatisThymeleafApplicationTests" time="2.88" displayname="Springbootstudy4MybatisThymeleafApplicationTests" uniqueid="[engine:junit-jupiter]/[class:org.kosta.myproject.Springbootstudy4MybatisThymeleafApplicationTests]">
+    <testcase name="getTotalCount" classname="org.kosta.myproject.Springbootstudy4MybatisThymeleafApplicationTests" time="2.88" displayname="getTotalCount()" uniqueid="[engine:junit-jupiter]/[class:org.kosta.myproject.Springbootstudy4MybatisThymeleafApplicationTests]/[method:getTotalCount()]"/>
+  </testsuite>
+</testrun>

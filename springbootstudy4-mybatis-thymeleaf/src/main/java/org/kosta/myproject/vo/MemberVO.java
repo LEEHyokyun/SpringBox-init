@@ -1,6 +1,11 @@
 package org.kosta.myproject.vo;
 
-public class MemberVO {
+import java.io.Serializable;
+
+//session에 저장되는 정보는 직렬화를 하여 정보 유지
+//세션에 저장되는 객체는 직렬화시 서버 리로드가 되어도 유지 가능(Container 차원에서)
+public class MemberVO implements Serializable{
+	private static final long serialVersionUID = 4319098642053468565L;
 	private String id;
 	private String password;
 	private String name;
@@ -36,7 +41,7 @@ public class MemberVO {
 	}
 
 	public String getName() {
-		System.out.println("getName()");
+		//System.out.println("getName()");
 		return name;
 	}
 
@@ -45,7 +50,7 @@ public class MemberVO {
 	}
 
 	public String getAddress() {
-		System.out.println("getAddress()");
+		//System.out.println("getAddress()");
 		return address;
 	}
 

@@ -27,6 +27,7 @@
 		* 변수 : ${}
 		* 링크 url : @{}
 		* 선택변수 : *{}
+	※ jsp, tstl과 달리 tag를 통해 data를 전달받는다.
 	
 ※ jsp - java class로 생성되어 servlet으로 실행되는 방식 
 ※ thymeleaf - html 구조상에서 실행되는 방식

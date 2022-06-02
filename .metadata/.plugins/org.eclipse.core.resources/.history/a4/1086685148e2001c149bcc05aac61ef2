@@ -1,0 +1,28 @@
+package org.kosta.myproject.controller;
+
+import org.kosta.myproject.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class ProductController {
+	private ProductMapper productMapper;
+
+	@Autowired
+	public ProductController(ProductMapper productMapper) {
+		super();
+		this.productMapper = productMapper;
+	}
+	
+	@GetMapping("getProductTotalCount") //for ajax
+	@ResponseBody 
+	public int getTotalCount() {
+		int result = productMapper.getTotalCount();
+		return result;
+	}
+	
+	@GetMapping("getProductTotalCount2") //for thymeleaf
+}

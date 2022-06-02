@@ -24,5 +24,19 @@ index.html from spring boot<br><br>
 <a href="study3" th:href="@{/study3}">study3 link href querystring</a><br>
 <!-- a href : 로컬, 세부경로 모두 작성 필요 / th:href : server side, context path에 따라 유연하게 작성 가능-->
 <a href="dinner" th:href="@{/study4}">study4</a><br>
+<a href="" th:href="@{/study5}">study5 if unless switch</a><br>
+<a href="" th:href="@{/study6}">loop</a><br>
+<a href="" th:href="@{/study7}">loop each lists</a><br>
+<a href="" th:href="@{/study8}">loop each numbers</a><br>
+<a href="" th:href="@{/study9(id=java)}">javascript</a><br>
+<a href="" th:href="@{/study10}">thymeleaf, ajax-10</a><br>
+<a href="" th:href="@{/study11}">thymeleaf, ajax-11</a><br>
+<a href="" th:href="@{/study12}">thymeleaf, ajax-12</a><br>
+<!--/*
+	thymeleaf 조건문 적용
+*/-->
+<th:block th:if="${session.member}!=null">
+<span th:text="${session.member.name}">회원명</span>님
+</th:block>
 </body>
 </html>
