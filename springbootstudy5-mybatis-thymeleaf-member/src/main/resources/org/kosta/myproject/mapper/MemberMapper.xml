@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.kosta.myproject.mapper.MemberMapper">
+	<select id="getTotalMemberCount" resultType="int">
+		select count(*) from spring_member
+	</select>
+	<select id="findMemberById" parameterType="string" resultType="org.kosta.myproject.vo.MemberVO">
+		select id, password, name, address from spring_member
+		where id = #{id}
+	</select>
+	<select id="getAddressList" resultType="string">
+		select distinct address from spring_member
+	</select>
+	<select id="findMemberListByAddress" parameterType="string" resultType="org.kosta.myproject.vo.MemberVO">
+		select id, name from spring_member
+		where address =#{address}
+	</select>
+</mapper>

@@ -18,7 +18,9 @@
 <!--/* controller에서 전송한 변수를 span없이 바로 사용하고자 할 때 */-->
 [[${param.id}]]<br>
 <script type="text/javascript" th:inline="javascript">
-	let data = [[${param.id}]];
+	let data = /*[[${param.id}]]*/ "data";
+	let data2 = /*[[${param.id}]]*/ "data2";
+	
 	alert("js test"+data);
 	//location.href="/";
 </script>
