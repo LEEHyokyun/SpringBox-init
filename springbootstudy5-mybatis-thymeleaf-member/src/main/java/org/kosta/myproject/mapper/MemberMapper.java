@@ -15,5 +15,11 @@ public interface MemberMapper {
 	List<String> getAddressList();
 
 	List<MemberVO> findMemberListByAddress(String address);
+
+	MemberVO login(MemberVO memberVO);
+
+	void updateMember(MemberVO memberVO);
+
+	void registerMember(MemberVO memberVO);
 	
 }

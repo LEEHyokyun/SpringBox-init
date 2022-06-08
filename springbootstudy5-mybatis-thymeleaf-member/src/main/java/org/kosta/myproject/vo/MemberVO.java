@@ -1,6 +1,11 @@
 package org.kosta.myproject.vo;
 
-public class MemberVO {
+import java.io.Serializable;
+
+//객체 직렬화를 통한 세션 정보 유지
+public class MemberVO implements Serializable {
+	private static final long serialVersionUID = -4547755095127981561L;
+
 	private String id;
 	private String password;
 	private String name;
@@ -18,6 +23,11 @@ public class MemberVO {
 		this.name = name;
 		this.address = address;
 	}
+
+	/*
+	 * public MemberVO(String name, String address) { super(); this.name = name;
+	 * this.address = address; }
+	 */
 
 	public String getId() {
 		return id;

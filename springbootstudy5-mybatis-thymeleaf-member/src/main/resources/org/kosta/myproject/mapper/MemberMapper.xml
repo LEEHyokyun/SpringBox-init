@@ -15,4 +15,17 @@
 		select id, name from spring_member
 		where address =#{address}
 	</select>
+	<select id="login" parameterType="org.kosta.myproject.vo.MemberVO" resultType="org.kosta.myproject.vo.MemberVO">
+		select id, password, name, address from spring_member
+		where id=#{id} and password=#{password}
+	</select>
+	<update id="updateMember" parameterType="org.kosta.myproject.vo.MemberVO">
+		update spring_member
+		set password=#{password}, name= #{name}, address=#{address}
+		where id=#{id}
+	</update>
+	<insert id="registerMember" parameterType="org.kosta.myproject.vo.MemberVO">
+		insert into spring_member(id, password, name, address)
+		values(#{id}, #{password}, #{name}, #{address})
+	</insert>
 </mapper>

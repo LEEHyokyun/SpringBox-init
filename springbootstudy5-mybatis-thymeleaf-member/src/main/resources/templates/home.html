@@ -14,8 +14,9 @@
 <div class="container pt-4"></div>
 <!--/* thymeleaf class*/-->
 <h4>SpringBoot Thymeleaf</h4>
-총 회원수 [[${count}]]명<br>
+총 회원수 <span th:text="|${count} 명|"></span><br>
 <br><br>
+<th:block th:if="${session.mvo}!=null">
 <form action="findMemberById" method="get">
 	<input type="text" name="id" placeholder="회원 아이디"><button type="submit">검색</button><br>
 </form><br>
@@ -27,8 +28,28 @@
 	</select>
 	<button type="submit">검색</button>
 </form>
+</th:block>
 <br><br>
 <a href="" th:href="@{/session-test}">session test</a><br>
 <a href="" th:href="@{/session-test2}">session test</a><br>
+<br><br>
+<th:block th:if="${session.mvo}==null">
+<form action="login" method="post">
+	<input type="text" name="id" placeholder="아이디" required="required"><br>
+	<input type="password" name="password" placeholder="비밀번호" required="required"><br>
+	<button type="submit">로그인</button>
+</form>
+<br><br>
+<a href="" th:href="@{/registerMemberForm}">회원가입</a>
+</th:block>
+<th:block th:if="${session.mvo}!=null">
+	<span th:text="${session.mvo.name}"></span>님 환영합니다.<br>
+	<form action="logout" method="post">
+		<button type="submit" class="btn btn-link">로그아웃</button>
+	</form>
+	<br><br>
+	<a href="" th:href="@{/updateMemberForm}">회원정보수정</a>
+</th:block>
+<br><br>
 </body>
 </html>
