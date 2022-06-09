@@ -20,10 +20,10 @@ public class LoginCheckInterceptor implements HandlerInterceptor{
 		
 		HttpSession session = request.getSession(false);
 		if(session!=null && session.getAttribute("mvo") != null) {
-			log.info("interceptor test : authorized, {}", request.getRequestURI());
+			//log.info("interceptor test : authorized, {}", request.getRequestURI());
 			return true; //컨트롤러 실행
 		}else {
-			log.warn("interceptor test : not authorized, {}", request.getRequestURI());
+			//log.warn("interceptor test : not authorized, {}", request.getRequestURI());
 			response.sendRedirect("/");
 			return false; //컨트롤러 미실행
 		}

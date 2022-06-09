@@ -1,8 +1,0 @@
-package org.kosta.myproject.vo;
-
-public class ProductVO {
-	private int productNo;
-	private String name;
-	private String maker;
-	private int price;
-}
