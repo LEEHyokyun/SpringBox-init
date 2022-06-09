@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.kosta</groupId>
-	<artifactId>springbootstudy5-mybatis-thymeleaf-member</artifactId>
+	<artifactId>springbootstudy5-mybatis-thymeleaf-member-Interceptor</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>springbootstudy5-mybatis-thymeleaf-member</name>
 	<description>Demo project for Spring Boot</description>
