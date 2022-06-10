@@ -136,4 +136,28 @@ public class HomeController {
 	public String study12() {
 		return "step12-ajax";
 	}
+	
+	@RequestMapping("study13")
+	public String study13(Model model) {
+		model.addAttribute("message", "thymeleaf layout");
+		return "step13-main1";
+	}
+	
+	@RequestMapping("study13-2")
+	public String study13_2(Model model){
+		model.addAttribute("message", "thymeleaf layout - 2");
+		return "step13-main2";
+	}
+	
+	@RequestMapping("study14")
+	public String study14(Model model){
+		model.addAttribute("message", "thymeleaf layout - all in one layout");
+		return "step14-main1";
+	}
+	
+	@RequestMapping("study14-2")
+	public String study14_2(Model model){
+		model.addAttribute("message", "thymeleaf layout - all in one layout - 2");
+		return "step14-main2";
+	}
 }
