@@ -1,4 +1,4 @@
-package org.kosta.myproject;
+package org.kosta.myproject.test;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

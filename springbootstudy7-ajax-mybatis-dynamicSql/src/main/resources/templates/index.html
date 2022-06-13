@@ -19,6 +19,17 @@
 <button type="button" id="AjaxBtn2">AjaxTest2</button>
 <button type="button" id="AjaxBtn3">AjaxTest3</button>
 <button type="button" id="AjaxBtn4">AjaxTest4</button>
+<!-- /* error 처리 test */-->
+<form method="post" action="test">
+	<button type="submit">테스트</button>
+</form>
+<br><br>
+<!--/* Dynamic SQL, json array */-->
+<a href="" th:href="@{/employeeAjaxTest}">test1</a>
+<br><br>
+<!--/* thymeleaf를 이용하여 controller에서 html 요소를 응답받아 처리 */-->
+<a href="" th:href="@{/employeeAjaxTest2}">test2</a>
+<br><br>
 <script type="text/javascript">
 	$(function(){
 		$("#AjaxBtn1").click(function(){
