@@ -18,6 +18,7 @@
 		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="net.harawata.mybatipse.wizard.NewXmlMapperWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="net.harawata.mybatipse.wizard.mybatisCategory"/>
+			<item value="org.mybatis.generator.eclipse.ui.category"/>
 		</list>
 	</section>
 </section>

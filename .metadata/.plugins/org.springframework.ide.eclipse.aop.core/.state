@@ -7,4 +7,5 @@
 <aop-project name="springbootstudy1-mybatis-jsp"/>
 <aop-project name="springbootstudy2-mybatis-jsp"/>
 <aop-project name="springbootstudy6-aop-transcation"/>
+<aop-project name="springstudy8-REST"/>
 </aop-reference-model>
